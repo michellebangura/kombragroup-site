@@ -128,17 +128,17 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
 <body>
 
 <nav>
-  <a href="#" class="nav-mark" onclick="showPage('home')">kombra<span>group</span></a>
+  <a href="javascript:void(0)" class="nav-mark" onclick="event.preventDefault();showPage('home')">kombra<span>group</span></a>
   <ul class="nav-links">
-    <li><a href="#" onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
-    <li><a href="#" onclick="showPage('services')" id="nav-services">Services</a></li>
-    <li><a href="#" onclick="showPage('ventures')" id="nav-ventures">Ventures</a></li>
-    <li><a href="#" onclick="showPage('work')" id="nav-work">Portfolio</a></li>
-    <li><a href="#" onclick="showPage('downloads')" id="nav-downloads">Downloads</a></li>
-    <li><a href="#" onclick="showPage('about')" id="nav-about">About</a></li>
-    <li><a href="#" onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('home')" class="active" id="nav-home">Home</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('services')" id="nav-services">Services</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('ventures')" id="nav-ventures">Ventures</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('work')" id="nav-work">Portfolio</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('downloads')" id="nav-downloads">Downloads</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('about')" id="nav-about">About</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" id="nav-contact">Contact</a></li>
   </ul>
-  <a href="#" class="nav-cta" onclick="showPage('contact')">Get started</a>
+  <a href="javascript:void(0)" class="nav-cta" onclick="event.preventDefault();showPage('contact')">Get started</a>
   <button class="menu-btn" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
 
@@ -275,7 +275,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
         </div>
       </div>
 
-      <p style="margin-top:2rem;font-size:.95rem;color:var(--warm-gray)">Every engagement starts with a conversation. <a href="#" onclick="showPage('contact')" style="color:var(--copper)">Tell us what's not working &rarr;</a></p>
+      <p style="margin-top:2rem;font-size:.95rem;color:var(--warm-gray)">Every engagement starts with a conversation. <a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" style="color:var(--copper)">Tell us what's not working &rarr;</a></p>
     </div>
   </section>
 </div>
@@ -315,7 +315,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
         <p>AI-powered tools for intentional community building and caregiver support. Applying the "Profit in Progress" philosophy &mdash; profitability as the engine for sustainable social impact.</p>
       </div>
 
-      <p style="margin-top:2rem;font-size:.95rem;color:var(--warm-gray)">We're selectively open to conversations with aligned investors and strategic partners. <a href="#" onclick="showPage('contact')" style="color:var(--copper)">Reach out &rarr;</a></p>
+      <p style="margin-top:2rem;font-size:.95rem;color:var(--warm-gray)">We're selectively open to conversations with aligned investors and strategic partners. <a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" style="color:var(--copper)">Reach out &rarr;</a></p>
     </div>
   </section>
 </div>
@@ -467,7 +467,8 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
 
       <div class="contact-grid">
         <div>
-          <div class="contact-method"><label>Email</label><a href="/cdn-cgi/l/email-protection#8ae2efe6e6e5cae1e5e7e8f8ebedf8e5fffaa4e9e5e7"><span class="__cf_email__" data-cfemail="a7cfc2cbcbc8e7ccc8cac5d5c6c0d5c8d2d789c4c8ca">[email&#160;protected]</span></a></div>
+          <div class="contact-method"><label>Email</label><a href="mailto:hello@kombragroup.com">hello@kombragroup.com</a></div>
+          <div class="contact-method"><label>Phone</label><span>+1 415-226-9566</span></div>
           <div class="contact-method"><label>Founder</label><a href="https://michellebglobal.com" target="_blank">michellebglobal.com</a></div>
           <div class="contact-method"><label>LinkedIn</label><a href="https://linkedin.com/in/michellebangura" target="_blank">linkedin.com/in/michellebangura</a></div>
         </div>
@@ -493,11 +494,11 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
     <div class="footer-name">Kombra Group</div>
     <p>Systems that work. Ventures that last.</p>
     <p style="margin-top:.6rem"><a href="https://michellebglobal.com" target="_blank">Michelle Bangura</a> &nbsp;&middot;&nbsp; <a href="https://linkedin.com/in/michellebangura" target="_blank">LinkedIn</a></p>
-    <p style="margin-top:.75rem;font-size:.65rem">&copy; 2026 Kombra Group LLC. All rights reserved.</p>
+    <p style="margin-top:.75rem;font-size:.65rem">&copy; 2026 Kombra Group Inc. All rights reserved.</p>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
@@ -507,5 +508,37 @@ function showPage(id){
 }
 function toggleMenu(){
   var l=document.querySelector('.nav-links');
-  if(l.style.display==='flex'){l.style.display='none'}
-  else{l.style.display='flex';l.style.flexDirection='column';
+  var btn=document.querySelector('.menu-btn');
+  if(l.classList.contains('open')){
+    l.classList.remove('open');
+    l.style.display='none';
+    btn.classList.remove('open');
+  } else {
+    l.classList.add('open');
+    l.style.display='flex';
+    l.style.flexDirection='column';
+    l.style.position='absolute';
+    l.style.top='100%';
+    l.style.left='0';
+    l.style.right='0';
+    l.style.background='var(--warm-white)';
+    l.style.padding='1.5rem';
+    l.style.gap='1rem';
+    l.style.boxShadow='0 8px 24px rgba(0,0,0,.08)';
+    btn.classList.add('open');
+  }
+}
+document.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click',function(){
+    var l=document.querySelector('.nav-links');
+    var btn=document.querySelector('.menu-btn');
+    if(window.innerWidth<768){
+      l.classList.remove('open');
+      l.style.display='none';
+      btn.classList.remove('open');
+    }
+  });
+});
+</script>
+</body>
+</html>
