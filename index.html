@@ -132,7 +132,6 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
   <ul class="nav-links">
     <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('home')" class="active" id="nav-home">Home</a></li>
     <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('services')" id="nav-services">Services</a></li>
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('accelerator')" id="nav-accelerator">Accelerator</a></li>
     <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('ventures')" id="nav-ventures">Ventures</a></li>
     <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('work')" id="nav-work">Portfolio</a></li>
     <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('downloads')" id="nav-downloads">Downloads</a></li>
@@ -143,21 +142,22 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
   <button class="menu-btn" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
 
+<!-- HOME -->
 <div class="page active" id="page-home">
   <section class="hero-section">
     <div class="container">
       <h1>We build systems that work.<br>We build businesses that last.</h1>
-      <p>Kombra Group is a consulting practice and AI-powered venture studio. We diagnose and fix operational problems for clients &mdash; and we build our own ventures using the same discipline. "The Profit of Progress" &mdash; profitability is the engine for sustainable social impact.</p>
+      <p>Kombra Group is a consulting practice and AI-powered venture studio. Delaware C-Corp. We diagnose and fix operational problems for clients &mdash; and we build our own ventures using the same discipline. "The Profit of Progress" &mdash; profitability is the engine for sustainable social impact.</p>
       <div class="hero-paths">
         <div class="hero-path" onclick="showPage('services')">
           <h3>Need help?</h3>
           <p>We make businesses work. Any size. Any industry. From enterprise transformation to getting your local business online. We design decision systems, not just solutions.</p>
           <span class="arrow">Services &rarr;</span>
         </div>
-        <div class="hero-path" onclick="showPage('accelerator')">
-          <h3>Early-stage founder?</h3>
-          <p>Get the operational architecture you need to scale without giving up 10% of your equity for a co-working space. Joint cohorts, playbooks, and consulting for equity.</p>
-          <span class="arrow">Accelerator &rarr;</span>
+        <div class="hero-path" onclick="showPage('ventures')">
+          <h3>Want to build with us?</h3>
+          <p>We're building AI-powered ventures that solve real problems. Every consulting engagement becomes input into a broader system that can be monetized at scale.</p>
+          <span class="arrow">Ventures &rarr;</span>
         </div>
       </div>
     </div>
@@ -184,6 +184,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
   </section>
 </div>
 
+<!-- SERVICES -->
 <div class="page" id="page-services">
   <section style="padding-top:110px">
     <div class="container">
@@ -193,8 +194,8 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
 
       <div style="max-width:620px;margin-bottom:2.5rem;padding:1.25rem;border-left:3px solid var(--copper);border-radius:0">
         <p style="font-size:.88rem;color:var(--charcoal);margin-bottom:.6rem"><strong style="color:var(--navy)">Design judgment:</strong> We don't build the most sophisticated system. We build the right one &mdash; configurable where it needs to be, maintainable by the team that inherits it, and designed for the person using it at 4pm on a Friday.</p>
-        <p style="font-size:.88rem;color:var(--charcoal);margin-bottom:.6rem"><strong style="color:var(--navy)">Systems thinking:</strong> We don't solve for the immediate problem alone. We identify patterns and design systems that can be reused, modularized, and productized.</p>
-        <p style="font-size:.88rem;color:var(--charcoal);margin-bottom:.6rem"><strong style="color:var(--navy)">Decision system design:</strong> We make organizational decision logic explicit &mdash; who owns what decisions, what inputs are required, how outcomes are measured.</p>
+        <p style="font-size:.88rem;color:var(--charcoal);margin-bottom:.6rem"><strong style="color:var(--navy)">Systems thinking:</strong> We don't solve for the immediate problem alone. We identify patterns and design systems that can be reused, modularized, and productized. Every engagement becomes input into scalable architecture.</p>
+        <p style="font-size:.88rem;color:var(--charcoal);margin-bottom:.6rem"><strong style="color:var(--navy)">Decision system design:</strong> We make organizational decision logic explicit &mdash; who owns what decisions, what inputs are required, how outcomes are measured. Organizations operate effectively long after we leave.</p>
         <p style="font-size:.88rem;color:var(--charcoal)"><strong style="color:var(--navy)">Narrative that sells:</strong> We translate complex architecture into the user's language. Every competitive proposal we've led has made the shortlist.</p>
       </div>
 
@@ -206,6 +207,8 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
           <div class="service-item">Operational diagnostic (2-week embedded)</div>
           <div class="service-item">Program rescue &amp; turnaround</div>
           <div class="service-item">Post-acquisition integration</div>
+          <div class="service-item">Process optimization across all functions</div>
+          <div class="service-item">Distributed team performance</div>
         </div>
       </div>
 
@@ -217,17 +220,60 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
           <div class="service-item">Enterprise architecture &amp; modernization</div>
           <div class="service-item">Salesforce ecosystem strategy</div>
           <div class="service-item">System integration design (MuleSoft, APIs)</div>
+          <div class="service-item">Legacy system migration planning</div>
+          <div class="service-item">Technical team structure &amp; hiring</div>
         </div>
       </div>
-      
+
       <div class="service-category">
         <h3>I need AI but don't know where to start</h3>
         <p>For organizations that want to use AI effectively &mdash; not just experimentally.</p>
         <div class="service-list">
           <div class="service-item">AI readiness assessment</div>
           <div class="service-item">AI governance &amp; risk framework</div>
+          <div class="service-item">Vibe code audit (AI-generated codebase review)</div>
           <div class="service-item">LLM deployment strategy</div>
           <div class="service-item">Process automation with AI</div>
+          <div class="service-item">Shadow AI audit &amp; remediation</div>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3>I need to get my business online or modernized</h3>
+        <p>For local and small businesses that need functional digital systems &mdash; not just a website.</p>
+        <div class="service-list">
+          <div class="service-item">Digital presence &amp; website redesign</div>
+          <div class="service-item">Online booking &amp; scheduling</div>
+          <div class="service-item">E-commerce setup &amp; optimization</div>
+          <div class="service-item">Workflow automation for small business</div>
+          <div class="service-item">AI tools for local operations</div>
+          <div class="service-item">Menu, ordering &amp; customer experience</div>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3>I'm a founder and need a technical partner</h3>
+        <p>For founders who need a builder-operator &mdash; without giving up equity.</p>
+        <div class="service-list">
+          <div class="service-item">Technical co-founder alternative</div>
+          <div class="service-item">MVP architecture &amp; build planning</div>
+          <div class="service-item">Team structure &amp; first hires</div>
+          <div class="service-item">Investor-ready technical narrative</div>
+          <div class="service-item">Scaling from founder-led to team-led</div>
+          <div class="service-item">Operational systems design</div>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3>I need to win a government contract</h3>
+        <p>100% shortlist rate across two firms. We know how to win.</p>
+        <div class="service-list">
+          <div class="service-item">RFP / RFI / RFQ response strategy</div>
+          <div class="service-item">Technical solution architecture for proposals</div>
+          <div class="service-item">Compliance mapping (FedRAMP, HIPAA, CJIS, SOC2)</div>
+          <div class="service-item">3rd-party vendor &amp; partner management</div>
+          <div class="service-item">Proposal governance &amp; team coordination</div>
+          <div class="service-item">Government contracting readiness</div>
         </div>
       </div>
 
@@ -236,127 +282,158 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
   </section>
 </div>
 
-<div class="page" id="page-accelerator">
-  <section style="padding-top:110px">
-    <div class="container">
-      <div class="section-label">Accelerator Light</div>
-      <h2 class="section-title">Scale your operations, keep your equity.</h2>
-      <p class="section-intro">Most startups don't fail from a lack of capital; they fail from a lack of functional operating systems. We've unbundled the traditional accelerator model to offer execution, architecture, and peer-accountability without the bloated equity requirements.</p>
-
-      <div class="service-category">
-        <h3>The 6-Week Cohort (Community + Curriculum)</h3>
-        <p>A structured, guided transformation program blending self-guided learning with expert coaching. Join a peer network of founders building sustainable architecture.</p>
-        <div class="service-list">
-          <div class="service-item">Week 1: Diagnosis First (The Human System)</div>
-          <div class="service-item">Week 2: Structure Before Action (Decision Systems)</div>
-          <div class="service-item">Week 3: Systems Thinking & Architecture</div>
-          <div class="service-item">Week 4: AI-Native Operations Deployment</div>
-          <div class="service-item">Week 5: P&L and The Profit of Progress</div>
-          <div class="service-item">Week 6: The Narrative That Sells</div>
-        </div>
-      </div>
-
-      <div class="service-category">
-        <h3>Consulting for Equity (Sweat Equity)</h3>
-        <p>For domain experts who need a technical co-builder. We provide the operational infrastructure and high-level architectural buildouts in exchange for equity—aligning our outcomes directly with your growth.</p>
-        <div class="service-list">
-          <div class="service-item">MVP architecture &amp; build planning</div>
-          <div class="service-item">Team structure &amp; first technical hires</div>
-          <div class="service-item">Scaling from founder-led to team-led</div>
-          <div class="service-item">AI governance frameworks</div>
-        </div>
-      </div>
-
-      <div class="service-category">
-        <h3>The Self-Guided Playbook</h3>
-        <p>A comprehensive digital guidebook mapping our enterprise-grade transformation processes to early-stage growth. Bundled with a dedicated bucket of 1-on-1 consulting hours for when you hit a wall.</p>
-        <div class="service-list">
-          <div class="service-item">Step-by-step operational playbooks</div>
-          <div class="service-item">Pre-built decision rights matrices (RACI)</div>
-          <div class="service-item">Unit economics modeling templates</div>
-          <div class="service-item">Direct access to our senior architects</div>
-        </div>
-      </div>
-      
-      <p style="margin-top:2rem;font-size:.95rem;color:var(--warm-gray)">Ready to build a system that works? <a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" style="color:var(--copper)">Apply for the next cohort &rarr;</a></p>
-    </div>
-  </section>
-</div>
-
+<!-- VENTURES -->
 <div class="page" id="page-ventures">
   <section style="padding-top:110px">
     <div class="container">
       <div class="section-label">The studio</div>
       <h2 class="section-title">We don't just fix businesses. We build them.</h2>
-      <p class="section-intro">Kombra Group is an AI-powered venture studio. We apply 20 years of enterprise architecture and operational discipline to build businesses that solve real problems.</p>
+      <p class="section-intro">Kombra Group is a venture studio. We apply 20 years of enterprise architecture and operational discipline to build businesses that solve real problems &mdash; using AI as a force multiplier.</p>
 
       <div class="venture-thesis">
         <h3>The Kombra thesis</h3>
-        <p>Every consulting engagement teaches us where systems are broken. We take those insights and build ventures that fix the problem at scale.</p>
-        <div class="thesis-point">Consulting → platform thinking: one-off solutions become configurable products</div>
-        <div class="thesis-point">Shared infrastructure across ventures (knowledge systems, AI tooling)</div>
+        <p>Every consulting engagement teaches us where systems are broken. We take those insights and build ventures that fix the problem at scale &mdash; not for one client, but for the market.</p>
+        <div class="thesis-point">Consulting → platform thinking: one-off solutions become configurable, scalable products</div>
+        <div class="thesis-point">Shared infrastructure across ventures (knowledge systems, AI tooling, operational frameworks)</div>
         <div class="thesis-point">Self-first: we build for ourselves, validate, then productize</div>
         <div class="thesis-point">Enterprise-grade compliance and governance from day one</div>
+        <div class="thesis-point">Human-centered design &mdash; systems built for the person at 4pm on a Friday</div>
       </div>
 
       <div class="venture-card">
         <div class="venture-status">Active &mdash; Venture studio</div>
         <h3>Kombra Group operating system</h3>
-        <p>AI-powered knowledge management, process intelligence, and automated content systems. Built internally, designed for productization.</p>
+        <p>AI-powered knowledge management, process intelligence, and automated content systems. Built internally, designed for productization. The infrastructure that powers the studio and every venture within it.</p>
       </div>
 
       <div class="venture-card">
         <div class="venture-status">Active &mdash; International development</div>
         <h3>Africa Tomorrow</h3>
-        <p>Sustainable community infrastructure in Sierra Leone. Integrated land-use architecture spanning aquaculture, livestock, housing, and water systems.</p>
+        <p>Sustainable community infrastructure in Sierra Leone. Integrated land-use architecture spanning aquaculture, livestock, housing, and water systems. The hardest human-systems challenge in our portfolio &mdash; and the one with the highest long-term impact.</p>
       </div>
+
+      <div class="venture-card">
+        <div class="venture-status">In development</div>
+        <h3>Community &amp; caregiving platforms</h3>
+        <p>AI-powered tools for intentional community building and caregiver support. Applying the "Profit in Progress" philosophy &mdash; profitability as the engine for sustainable social impact.</p>
+      </div>
+
+      <p style="margin-top:2rem;font-size:.95rem;color:var(--warm-gray)">We're selectively open to conversations with aligned investors and strategic partners. <a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" style="color:var(--copper)">Reach out &rarr;</a></p>
     </div>
   </section>
 </div>
 
+<!-- PORTFOLIO -->
 <div class="page" id="page-work">
   <section style="padding-top:110px">
     <div class="container">
       <div class="section-label">Project portfolio</div>
       <h2 class="section-title">$500M+ in programs designed, planned, and delivered.</h2>
       <p class="section-intro">Architecture, planning, competitive capture, delivery, and rescue &mdash; across government, enterprise, and international development.</p>
+
       <div class="portfolio-group">
         <h3>Government &amp; public sector</h3>
-        <div class="portfolio-item"><strong>Major housing authority &mdash; Enterprise modernization</strong><p>$40M program. 400,000+ residents. COBOL-to-cloud migration.</p></div>
-        <div class="portfolio-item"><strong>State board of elections &mdash; Voter systems &amp; campaign finance</strong><p>Zero-trust voter management, fraud detection, identity verification.</p></div>
+        <div class="portfolio-item"><strong>Major housing authority &mdash; Enterprise modernization</strong><p>$40M program. 400,000+ residents. COBOL-to-cloud migration, tenant lifecycle platform, HUD reporting automation.</p><div class="metric">Reduced maintenance cycle time. Increased federal audit readiness.</div></div>
+        <div class="portfolio-item"><strong>State board of elections &mdash; Voter systems &amp; campaign finance</strong><p>Zero-trust voter management, public matching funds platform, fraud detection, identity verification.</p><div class="metric">Reduced manual validation. Enhanced public trust via auditability.</div></div>
         <div class="portfolio-item"><strong>Major city pandemic response</strong><p>Public platform scaled to tens of millions of users within weeks.</p></div>
+        <div class="portfolio-item"><strong>Major city civic platform (311)</strong><p>Mobile/web intake, GIS routing, SLA dashboards, citizen notification.</p><div class="metric">50% case deflection increase. 30% SLA improvement.</div></div>
+        <div class="portfolio-item"><strong>State health department &mdash; Surveillance &amp; licensing</strong><p>Disease reporting pipelines, nursing home compliance, inspection automation.</p><div class="metric">100% digitization. 3x faster deficiency identification.</div></div>
+        <div class="portfolio-item"><strong>State economic security &mdash; Fraud recovery</strong><p>Fraud scoring engine, automated collections, treasury integration.</p><div class="metric">$15M+ projected Year 1 recovery. 80% reduction in manual routing.</div></div>
+        <div class="portfolio-item"><strong>State finance authority &mdash; Grants compliance</strong><p>Grant lifecycle management, risk scoring, federal drawdown automation.</p><div class="metric">45% faster disbursement. Zero-defect reporting.</div></div>
+      </div>
+
+      <div class="portfolio-group">
+        <h3>Enterprise &amp; regulated industry</h3>
+        <div class="portfolio-item"><strong>Regulated precious metals firm</strong><p>Real-time pricing, call routing, compliance recording, wealth analytics, fulfillment automation.</p><div class="metric">35% lead-to-close increase. 100% compliance.</div></div>
+        <div class="portfolio-item"><strong>Global health insurance group</strong><p>50 global Salesforce instance audit. Capability assessment and consolidation roadmap.</p></div>
+        <div class="portfolio-item"><strong>Aviation authority</strong><p>IoT predictive maintenance, work order automation, budget forecasting.</p><div class="metric">25% less unplanned downtime. 40% crew utilization increase.</div></div>
+        <div class="portfolio-item"><strong>Global manufacturer</strong><p>Enterprise SAFe, CI/CD governance, cross-border collaboration.</p><div class="metric">70% fewer rollbacks. 3x faster time-to-market.</div></div>
+        <div class="portfolio-item"><strong>Regulated goods tracking</strong><p>Lifecycle monitoring, inventory reconciliation, enforcement dashboards.</p><div class="metric">100K+ daily records automated.</div></div>
+      </div>
+
+      <div class="portfolio-group">
+        <h3>International development</h3>
+        <div class="portfolio-item"><strong>Africa Tomorrow &mdash; Sierra Leone</strong><p>Founded sustainable community development initiative. Land acquisition, tribal negotiation, integrated agriculture, workforce training. Transitioned to local management in 2022.</p></div>
+      </div>
+
+      <div class="logo-strip">
+        <p>Organizations and agencies</p>
+        <div class="logo-grid">
+          <span class="logo-placeholder">NYC Housing</span>
+          <span class="logo-placeholder">NYS Elections</span>
+          <span class="logo-placeholder">CGI</span>
+          <span class="logo-placeholder">MTX Group</span>
+          <span class="logo-placeholder">San Diego</span>
+          <span class="logo-placeholder">Health Leads</span>
+          <span class="logo-placeholder">TrueCar</span>
+          <span class="logo-placeholder">Rosland Capital</span>
+          <span class="logo-placeholder">Ametek</span>
+          <span class="logo-placeholder">Accenture</span>
+        </div>
+      </div>
+
+      <div class="section-label" style="margin-top:1.5rem">Technical depth</div>
+      <div class="tech-strip">
+        <span class="tech-tag">Salesforce (PSS, FSC, Service, Data Cloud)</span>
+        <span class="tech-tag">MuleSoft</span>
+        <span class="tech-tag">AWS</span>
+        <span class="tech-tag">Azure</span>
+        <span class="tech-tag">GCP</span>
+        <span class="tech-tag">Docker / K8s</span>
+        <span class="tech-tag">Terraform</span>
+        <span class="tech-tag">Snowflake</span>
+        <span class="tech-tag">PostgreSQL</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">REST / GraphQL</span>
+        <span class="tech-tag">OmniStudio</span>
+        <span class="tech-tag">Einstein / Copilot</span>
+        <span class="tech-tag">Power BI / Tableau</span>
+        <span class="tech-tag">SOC2 / HIPAA / FedRAMP / CJIS</span>
       </div>
     </div>
   </section>
 </div>
 
+<!-- DOWNLOADS -->
 <div class="page" id="page-downloads">
   <section style="padding-top:110px">
     <div class="container">
       <div class="section-label">Resources</div>
       <h2 class="section-title">Download our service overviews and guides.</h2>
-      
+      <p class="section-intro">Detailed one-pagers for specific engagements. Share with your team or use to scope a conversation.</p>
+
       <div class="download-grid">
         <div class="download-card">
-          <h4>Accelerator Light Overview</h4>
-          <p>Curriculum details, cohort schedules, and sweat equity consulting models.</p>
-          <span class="dl-type">PDF &middot; Program Guide</span>
-        </div>
-        <div class="download-card">
           <h4>Fractional COO overview</h4>
-          <p>What changes when we embed as your operational leader.</p>
+          <p>What changes when we embed as your operational leader. Scope, timeline, outcomes.</p>
           <span class="dl-type">PDF &middot; One-pager</span>
         </div>
         <div class="download-card">
-          <h4>Self-Guided Startup Playbook</h4>
-          <p>The first chapter of our operational scaling framework.</p>
-          <span class="dl-type">PDF &middot; Free Sample</span>
+          <h4>Consulting services overview</h4>
+          <p>Full catalog of engagement types from enterprise transformation to small business modernization.</p>
+          <span class="dl-type">PDF &middot; Overview</span>
+        </div>
+        <div class="download-card">
+          <h4>AI readiness checklist</h4>
+          <p>10 questions to assess whether your organization is ready for AI implementation.</p>
+          <span class="dl-type">PDF &middot; Free guide</span>
+        </div>
+        <div class="download-card">
+          <h4>Government contracting capability statement</h4>
+          <p>For agencies evaluating Kombra Group as a technology partner.</p>
+          <span class="dl-type">PDF &middot; Capability statement</span>
+        </div>
+        <div class="download-card">
+          <h4>Venture studio overview</h4>
+          <p>The Kombra thesis, current portfolio, and partnership model. For investors and strategic partners.</p>
+          <span class="dl-type">PDF &middot; Pitch summary</span>
         </div>
       </div>
     </div>
   </section>
 </div>
 
+<!-- ABOUT -->
 <div class="page" id="page-about">
   <section style="padding-top:110px">
     <div class="container">
@@ -366,38 +443,54 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
       <div class="about-content">
         <p>Kombra Group was founded by Michelle Bangura &mdash; a first-generation American with parents from Sierra Leone &mdash; to do two things simultaneously: fix the operational problems that hold organizations back, and build new ventures that solve those problems at scale.</p>
 
-        <p>The consulting practice brings 20 years of enterprise architecture and operational leadership across 15+ industries, 4 continents, and $500M+ in programs.</p>
+        <p>The consulting practice brings 20 years of enterprise architecture and operational leadership across 15+ industries, 4 continents, and $500M+ in programs. We've rescued failing government modernizations, built platforms used by millions, and designed operational systems for everything from precious metals trading to predictive aviation maintenance to pandemic response infrastructure.</p>
+
+        <p>The venture studio takes the insights from that work and builds businesses. Every consulting engagement reveals where systems are broken. We don't just solve for the immediate problem &mdash; we identify patterns, design reusable modules, and build ventures that fix the break at scale. Consulting → platform thinking → product.</p>
 
         <div class="about-highlight">The consulting funds and informs the ventures. The ventures test and prove the operational frameworks. Each strengthens the other. This is what we mean by "The Profit of Progress."</div>
 
-        <p><strong>Entity:</strong> Delaware C-Corp. SAM.gov registered.</p>
-        <p><strong>Founder:</strong> Michelle Bangura &mdash; Operator, builder, founder. <a href="https://michellebglobal.com" style="color:var(--copper)" target="_blank">michellebglobal.com &rarr;</a></p>
+        <p><strong>How we operate:</strong> Diagnosis first. Structure before action. Explicit over implicit. We make decision logic visible, define clear scope boundaries, and design systems that organizations can run long after we leave. We don't just fix the problem &mdash; we design the decision systems that prevent it from recurring.</p>
+
+        <p><strong>AI-native:</strong> We don't experiment with AI &mdash; we operate with it. Claude, Gemini, and local models are daily production tools for operational design, compliance analysis, and process automation. We design AI governance frameworks for regulated industries where getting it wrong has real consequences.</p>
+
+        <div class="kombra-meaning">
+          <h4>Why "Kombra"</h4>
+          <p>Kombra comes from the Krio and Mende languages of Sierra Leone, meaning caregiver or mother. It represents the belief that the best systems &mdash; and the best businesses &mdash; are built to care for the people who depend on them. Not just efficient. Human.</p>
+        </div>
+
+        <p><strong>Entity:</strong> Delaware C-Corp. SAM.gov registered. MWB/MBE certification in progress.</p>
+        <p><strong>Founder:</strong> Michelle Bangura &mdash; 20 years across political operations, enterprise technology, government contracting, and international development. Operator, builder, founder. <a href="https://michellebglobal.com" style="color:var(--copper)" target="_blank">michellebglobal.com &rarr;</a></p>
       </div>
     </div>
   </section>
 </div>
 
+<!-- CONTACT -->
 <div class="page" id="page-contact">
   <section style="padding-top:110px">
     <div class="container">
       <div class="section-label">Get started</div>
       <h2 class="section-title">Tell us what's not working.</h2>
+      <p class="section-intro">Whether you need an operational fix, a technology partner, or want to explore the venture studio &mdash; start here.</p>
 
       <div class="contact-grid">
         <div>
           <div class="contact-method"><label>Email</label><a href="mailto:hello@kombragroup.com">hello@kombragroup.com</a></div>
           <div class="contact-method"><label>Phone</label><span>+1 415-226-9566</span></div>
           <div class="contact-method"><label>Founder</label><a href="https://michellebglobal.com" target="_blank">michellebglobal.com</a></div>
+          <div class="contact-method"><label>LinkedIn</label><a href="https://linkedin.com/in/michellebangura" target="_blank">linkedin.com/in/michellebangura</a></div>
         </div>
         <div>
           <div class="contact-method"><label>What brings you here?</label></div>
           <ul class="intake-form">
             <li>I need consulting help (any size business)</li>
-            <li>I'm interested in the Accelerator Light Cohort</li>
-            <li>I'm an early-stage founder seeking a technical co-builder</li>
+            <li>I need a fractional executive (COO, CTO)</li>
+            <li>I'm a founder seeking a technical partner</li>
             <li>I need to win a government contract</li>
             <li>I'm interested in the venture studio</li>
+            <li>I want to partner or collaborate</li>
           </ul>
+          <p style="margin-top:1rem;font-size:.85rem;color:var(--warm-gray)">We respond within 24 hours.</p>
         </div>
       </div>
     </div>
@@ -408,6 +501,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
   <div class="container">
     <div class="footer-name">Kombra Group</div>
     <p>Systems that work. Ventures that last.</p>
+    <p style="margin-top:.6rem"><a href="https://michellebglobal.com" target="_blank">Michelle Bangura</a> &nbsp;&middot;&nbsp; <a href="https://linkedin.com/in/michellebangura" target="_blank">LinkedIn</a></p>
     <p style="margin-top:.75rem;font-size:.65rem">&copy; 2026 Kombra Group Inc. All rights reserved.</p>
   </div>
 </footer>
