@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kombra Group | Systems That Work. Ventures That Last.</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--navy:#1B2A4A;--navy-mid:#2D4A6A;--navy-light:#3A5F8A;
+--copper:#B87333;--copper-light:#D4955A;
+--sand:#D4C5A9;--warm-white:#F7F4EF;--charcoal:#3D3D3A;--warm-gray:#8B8880;
+--teal:#2D6A5E;--teal-light:#3D8A7A;
+--font-display:'DM Serif Display',Georgia,serif;
+--font-body:'Instrument Sans','Segoe UI',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--charcoal);background:var(--warm-white);line-height:1.7;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(27,42,74,.95);backdrop-filter:blur(12px);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-mark{font-family:var(--font-display);font-size:1.15rem;color:rgba(255,255,255,.9);text-decoration:none}
+.nav-mark span{color:var(--copper)}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--copper)}
+.nav-cta{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--navy);background:var(--copper);padding:.5rem 1.2rem;border-radius:5px;text-decoration:none;transition:all .2s}
+.nav-cta:hover{background:var(--copper-light)}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-btn span{display:block;width:22px;height:2px;background:white;margin:5px 0}
+
+section{padding:5rem 2rem}
+.container{max-width:1000px;margin:0 auto}
+.page{display:none}
+.page.active{display:block}
+
+/* HERO — navy background */
+.hero-section{background:var(--navy);color:white;min-height:92vh;display:flex;align-items:center;padding-top:64px}
+.hero-section h1{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.2rem);color:white;line-height:1.15;margin-bottom:1rem;font-weight:400}
+.hero-section p{font-size:1.05rem;color:rgba(255,255,255,.6);max-width:580px;margin-bottom:2rem}
+.hero-paths{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.5rem;max-width:640px}
+.hero-path{padding:1.5rem;border:1px solid rgba(255,255,255,.12);border-radius:10px;cursor:pointer;transition:all .25s}
+.hero-path:hover{border-color:var(--copper);background:rgba(184,115,51,.06)}
+.hero-path h3{font-family:var(--font-display);font-size:1.1rem;color:white;margin-bottom:.35rem;font-weight:400}
+.hero-path p{font-size:.85rem;color:rgba(255,255,255,.45);margin:0}
+.hero-path .arrow{color:var(--copper);font-size:.8rem;margin-top:.5rem;display:block}
+
+.section-label{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--copper);margin-bottom:.75rem}
+.section-title{font-family:var(--font-display);font-size:clamp(1.7rem,3.2vw,2.2rem);color:var(--navy);margin-bottom:.75rem;font-weight:400}
+.section-intro{font-size:1rem;color:var(--warm-gray);max-width:620px;margin-bottom:2rem}
+
+/* SERVICES */
+.service-category{margin-bottom:3rem}
+.service-category h3{font-family:var(--font-display);font-size:1.2rem;color:var(--navy);margin-bottom:.5rem;font-weight:400;display:flex;align-items:center;gap:.5rem}
+.service-category h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--copper);flex-shrink:0}
+.service-category>p{font-size:.9rem;color:var(--warm-gray);margin-bottom:1rem;padding-left:1.25rem}
+.service-list{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;padding-left:1.25rem}
+.service-item{font-size:.85rem;color:var(--charcoal);padding:.6rem .8rem;background:white;border-radius:6px;border:1px solid rgba(212,197,169,.2);transition:border-color .2s}
+.service-item:hover{border-color:var(--copper)}
+
+/* VENTURES */
+.venture-card{padding:2rem;border:1px solid rgba(212,197,169,.3);border-radius:12px;margin-bottom:1.25rem;background:white}
+.venture-status{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--teal);margin-bottom:.4rem}
+.venture-card h3{font-family:var(--font-display);font-size:1.1rem;color:var(--navy);margin-bottom:.4rem;font-weight:400}
+.venture-card p{font-size:.88rem;color:var(--warm-gray)}
+
+.venture-thesis{padding:2rem;background:var(--navy);border-radius:12px;color:white;margin:2rem 0}
+.venture-thesis h3{font-family:var(--font-display);font-size:1.15rem;color:white;margin-bottom:.75rem;font-weight:400}
+.venture-thesis p{font-size:.9rem;color:rgba(255,255,255,.6);margin-bottom:.5rem}
+.venture-thesis .thesis-point{padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.85rem;color:rgba(255,255,255,.5)}
+
+/* PORTFOLIO */
+.portfolio-group{margin-bottom:2rem}
+.portfolio-group h3{font-family:var(--font-display);font-size:1.1rem;color:var(--navy);margin-bottom:.75rem;font-weight:400;padding-bottom:.4rem;border-bottom:1px solid rgba(212,197,169,.25)}
+.portfolio-item{padding:.75rem 0;border-bottom:1px solid rgba(212,197,169,.1)}
+.portfolio-item:last-child{border-bottom:none}
+.portfolio-item strong{color:var(--navy);font-weight:500;font-size:.9rem}
+.portfolio-item p{font-size:.83rem;color:var(--warm-gray);margin-top:.15rem}
+.portfolio-item .metric{font-size:.78rem;color:var(--copper);font-weight:500;margin-top:.15rem}
+
+.logo-strip{padding:2.5rem 0;border-top:1px solid rgba(212,197,169,.2);border-bottom:1px solid rgba(212,197,169,.2);margin:2.5rem 0}
+.logo-strip p{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--warm-gray);text-align:center;margin-bottom:1.25rem}
+.logo-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2rem;opacity:.4}
+.logo-placeholder{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--navy);padding:.4rem .8rem;border:1px solid rgba(27,42,74,.15);border-radius:3px;white-space:nowrap}
+
+.tech-strip{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0}
+.tech-tag{font-size:.68rem;font-weight:500;color:var(--navy-mid);background:rgba(27,42,74,.05);padding:.25rem .6rem;border-radius:3px}
+
+/* DOWNLOADS */
+.download-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.5rem 0}
+.download-card{padding:1.5rem;border:1px solid rgba(212,197,169,.25);border-radius:10px;background:white;transition:border-color .2s}
+.download-card:hover{border-color:var(--copper)}
+.download-card h4{font-family:var(--font-display);font-size:1rem;color:var(--navy);font-weight:400;margin-bottom:.3rem}
+.download-card p{font-size:.8rem;color:var(--warm-gray)}
+.download-card .dl-type{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--copper);margin-top:.5rem}
+
+/* ABOUT */
+.about-content{max-width:620px}
+.about-content p{margin-bottom:1rem;font-size:.95rem;color:var(--charcoal)}
+.about-highlight{font-size:1rem;color:var(--navy);font-weight:500;margin:1.5rem 0;padding-left:1rem;border-left:3px solid var(--copper)}
+.kombra-meaning{padding:1.5rem;background:var(--navy);border-radius:10px;color:white;margin:2rem 0}
+.kombra-meaning h4{font-family:var(--font-display);font-size:1rem;color:white;margin-bottom:.4rem;font-weight:400}
+.kombra-meaning p{font-size:.85rem;color:rgba(255,255,255,.55)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin:1.5rem 0}
+.contact-method{margin-bottom:1.25rem}
+.contact-method label{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--warm-gray);display:block;margin-bottom:.2rem}
+.contact-method a,.contact-method span{font-size:.95rem;color:var(--navy);text-decoration:none}
+.contact-method a:hover{color:var(--copper)}
+.intake-form{list-style:none}
+.intake-form li{padding:.5rem 0;font-size:.88rem;color:var(--charcoal);display:flex;align-items:center;gap:.5rem}
+.intake-form li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--copper);flex-shrink:0}
+
+footer{background:var(--navy);color:rgba(255,255,255,.4);padding:2.5rem 2rem;text-align:center;font-size:.78rem}
+footer a{color:var(--copper-light);text-decoration:none}
+footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:.3rem}
+
+@media(max-width:768px){
+  .hero-paths,.service-list,.download-grid,.contact-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .menu-btn{display:block}
+  section{padding:3.5rem 1.25rem}
+  .hero-section{min-height:auto;padding-top:90px;padding-bottom:2.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="javascript:void(0)" class="nav-mark" onclick="event.preventDefault();showPage('home')">kombra<span>group</span></a>
+  <ul class="nav-links">
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('home')" class="active" id="nav-home">Home</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('services')" id="nav-services">Services</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('accelerator')" id="nav-accelerator">Accelerator</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('ventures')" id="nav-ventures">Ventures</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('work')" id="nav-work">Portfolio</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('downloads')" id="nav-downloads">Downloads</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('about')" id="nav-about">About</a></li>
+    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" id="nav-contact">Contact</a></li>
+  </ul>
+  <a href="javascript:void(0)" class="nav-cta" onclick="event.preventDefault();showPage('contact')">Get started</a>
+  <button class="menu-btn" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page active" id="page-home">
+  <section class="hero-section">
+    <div class="container">
+      <h1>We build systems that work.<br>We build businesses that last.</h1>
+      <p>Kombra Group is a consulting practice and AI-powered venture studio. We diagnose and fix operational problems for clients &mdash; and we build our own ventures using the same discipline. "The Profit of Progress" &mdash; profitability is the engine for sustainable social impact.</p>
+      <div class="hero-paths">
+        <div class="hero-path" onclick="showPage('services')">
+          <h3>Need help?</h3>
+          <p>We make businesses work. Any size. Any industry. From enterprise transformation to getting your local business online. We design decision systems, not just solutions.</p>
+          <span class="arrow">Services &rarr;</span>
+        </div>
+        <div class="hero-path" onclick="showPage('accelerator')">
+          <h3>Early-stage founder?</h3>
+          <p>Get the operational architecture you need to scale without giving up 10% of your equity for a co-working space. Joint cohorts, playbooks, and consulting for equity.</p>
+          <span class="arrow">Accelerator &rarr;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="logo-strip">
+        <p>Organizations and agencies we've worked with</p>
+        <div class="logo-grid">
+          <span class="logo-placeholder">NYC Housing</span>
+          <span class="logo-placeholder">NYS Elections</span>
+          <span class="logo-placeholder">CGI</span>
+          <span class="logo-placeholder">MTX Group</span>
+          <span class="logo-placeholder">City of San Diego</span>
+          <span class="logo-placeholder">Health Leads</span>
+          <span class="logo-placeholder">TrueCar</span>
+          <span class="logo-placeholder">Rosland Capital</span>
+          <span class="logo-placeholder">Ametek</span>
+          <span class="logo-placeholder">tquila / Accenture</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-services">
+  <section style="padding-top:110px">
+    <div class="container">
+      <div class="section-label">What we fix</div>
+      <h2 class="section-title">Every business has operational problems. We solve them.</h2>
+      <p class="section-intro">People first. Process second. Technology third. We diagnose the human system underneath the operational failure and build what works &mdash; for the people who have to use it every day.</p>
+
+      <div style="max-width:620px;margin-bottom:2.5rem;padding:1.25rem;border-left:3px solid var(--copper);border-radius:0">
+        <p style="font-size:.88rem;color:var(--charcoal);margin-bottom:.6rem"><strong style="color:var(--navy)">Design judgment:</strong> We don't build the most sophisticated system. We build the right one &mdash; configurable where it needs to be, maintainable by the team that inherits it, and designed for the person using it at 4pm on a Friday.</p>
+        <p style="font-size:.88rem;color:var(--charcoal);margin-bottom:.6rem"><strong style="color:var(--navy)">Systems thinking:</strong> We don't solve for the immediate problem alone. We identify patterns and design systems that can be reused, modularized, and productized.</p>
+        <p style="font-size:.88rem;color:var(--charcoal);margin-bottom:.6rem"><strong style="color:var(--navy)">Decision system design:</strong> We make organizational decision logic explicit &mdash; who owns what decisions, what inputs are required, how outcomes are measured.</p>
+        <p style="font-size:.88rem;color:var(--charcoal)"><strong style="color:var(--navy)">Narrative that sells:</strong> We translate complex architecture into the user's language. Every competitive proposal we've led has made the shortlist.</p>
+      </div>
+
+      <div class="service-category">
+        <h3>My operation is broken</h3>
+        <p>For organizations where the work isn't flowing, teams aren't aligned, or programs are off the rails.</p>
+        <div class="service-list">
+          <div class="service-item">Fractional COO / VP of Operations</div>
+          <div class="service-item">Operational diagnostic (2-week embedded)</div>
+          <div class="service-item">Program rescue &amp; turnaround</div>
+          <div class="service-item">Post-acquisition integration</div>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3>I need technology leadership</h3>
+        <p>For companies that need senior technical strategy without a full-time executive hire.</p>
+        <div class="service-list">
+          <div class="service-item">Fractional CTO / Chief Architect</div>
+          <div class="service-item">Enterprise architecture &amp; modernization</div>
+          <div class="service-item">Salesforce ecosystem strategy</div>
+          <div class="service-item">System integration design (MuleSoft, APIs)</div>
+        </div>
+      </div>
+      
+      <div class="service-category">
+        <h3>I need AI but don't know where to start</h3>
+        <p>For organizations that want to use AI effectively &mdash; not just experimentally.</p>
+        <div class="service-list">
+          <div class="service-item">AI readiness assessment</div>
+          <div class="service-item">AI governance &amp; risk framework</div>
+          <div class="service-item">LLM deployment strategy</div>
+          <div class="service-item">Process automation with AI</div>
+        </div>
+      </div>
+
+      <p style="margin-top:2rem;font-size:.95rem;color:var(--warm-gray)">Every engagement starts with a conversation. <a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" style="color:var(--copper)">Tell us what's not working &rarr;</a></p>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-accelerator">
+  <section style="padding-top:110px">
+    <div class="container">
+      <div class="section-label">Accelerator Light</div>
+      <h2 class="section-title">Scale your operations, keep your equity.</h2>
+      <p class="section-intro">Most startups don't fail from a lack of capital; they fail from a lack of functional operating systems. We've unbundled the traditional accelerator model to offer execution, architecture, and peer-accountability without the bloated equity requirements.</p>
+
+      <div class="service-category">
+        <h3>The 6-Week Cohort (Community + Curriculum)</h3>
+        <p>A structured, guided transformation program blending self-guided learning with expert coaching. Join a peer network of founders building sustainable architecture.</p>
+        <div class="service-list">
+          <div class="service-item">Week 1: Diagnosis First (The Human System)</div>
+          <div class="service-item">Week 2: Structure Before Action (Decision Systems)</div>
+          <div class="service-item">Week 3: Systems Thinking & Architecture</div>
+          <div class="service-item">Week 4: AI-Native Operations Deployment</div>
+          <div class="service-item">Week 5: P&L and The Profit of Progress</div>
+          <div class="service-item">Week 6: The Narrative That Sells</div>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3>Consulting for Equity (Sweat Equity)</h3>
+        <p>For domain experts who need a technical co-builder. We provide the operational infrastructure and high-level architectural buildouts in exchange for equity—aligning our outcomes directly with your growth.</p>
+        <div class="service-list">
+          <div class="service-item">MVP architecture &amp; build planning</div>
+          <div class="service-item">Team structure &amp; first technical hires</div>
+          <div class="service-item">Scaling from founder-led to team-led</div>
+          <div class="service-item">AI governance frameworks</div>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3>The Self-Guided Playbook</h3>
+        <p>A comprehensive digital guidebook mapping our enterprise-grade transformation processes to early-stage growth. Bundled with a dedicated bucket of 1-on-1 consulting hours for when you hit a wall.</p>
+        <div class="service-list">
+          <div class="service-item">Step-by-step operational playbooks</div>
+          <div class="service-item">Pre-built decision rights matrices (RACI)</div>
+          <div class="service-item">Unit economics modeling templates</div>
+          <div class="service-item">Direct access to our senior architects</div>
+        </div>
+      </div>
+      
+      <p style="margin-top:2rem;font-size:.95rem;color:var(--warm-gray)">Ready to build a system that works? <a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" style="color:var(--copper)">Apply for the next cohort &rarr;</a></p>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-ventures">
+  <section style="padding-top:110px">
+    <div class="container">
+      <div class="section-label">The studio</div>
+      <h2 class="section-title">We don't just fix businesses. We build them.</h2>
+      <p class="section-intro">Kombra Group is an AI-powered venture studio. We apply 20 years of enterprise architecture and operational discipline to build businesses that solve real problems.</p>
+
+      <div class="venture-thesis">
+        <h3>The Kombra thesis</h3>
+        <p>Every consulting engagement teaches us where systems are broken. We take those insights and build ventures that fix the problem at scale.</p>
+        <div class="thesis-point">Consulting → platform thinking: one-off solutions become configurable products</div>
+        <div class="thesis-point">Shared infrastructure across ventures (knowledge systems, AI tooling)</div>
+        <div class="thesis-point">Self-first: we build for ourselves, validate, then productize</div>
+        <div class="thesis-point">Enterprise-grade compliance and governance from day one</div>
+      </div>
+
+      <div class="venture-card">
+        <div class="venture-status">Active &mdash; Venture studio</div>
+        <h3>Kombra Group operating system</h3>
+        <p>AI-powered knowledge management, process intelligence, and automated content systems. Built internally, designed for productization.</p>
+      </div>
+
+      <div class="venture-card">
+        <div class="venture-status">Active &mdash; International development</div>
+        <h3>Africa Tomorrow</h3>
+        <p>Sustainable community infrastructure in Sierra Leone. Integrated land-use architecture spanning aquaculture, livestock, housing, and water systems.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-work">
+  <section style="padding-top:110px">
+    <div class="container">
+      <div class="section-label">Project portfolio</div>
+      <h2 class="section-title">$500M+ in programs designed, planned, and delivered.</h2>
+      <p class="section-intro">Architecture, planning, competitive capture, delivery, and rescue &mdash; across government, enterprise, and international development.</p>
+      <div class="portfolio-group">
+        <h3>Government &amp; public sector</h3>
+        <div class="portfolio-item"><strong>Major housing authority &mdash; Enterprise modernization</strong><p>$40M program. 400,000+ residents. COBOL-to-cloud migration.</p></div>
+        <div class="portfolio-item"><strong>State board of elections &mdash; Voter systems &amp; campaign finance</strong><p>Zero-trust voter management, fraud detection, identity verification.</p></div>
+        <div class="portfolio-item"><strong>Major city pandemic response</strong><p>Public platform scaled to tens of millions of users within weeks.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-downloads">
+  <section style="padding-top:110px">
+    <div class="container">
+      <div class="section-label">Resources</div>
+      <h2 class="section-title">Download our service overviews and guides.</h2>
+      
+      <div class="download-grid">
+        <div class="download-card">
+          <h4>Accelerator Light Overview</h4>
+          <p>Curriculum details, cohort schedules, and sweat equity consulting models.</p>
+          <span class="dl-type">PDF &middot; Program Guide</span>
+        </div>
+        <div class="download-card">
+          <h4>Fractional COO overview</h4>
+          <p>What changes when we embed as your operational leader.</p>
+          <span class="dl-type">PDF &middot; One-pager</span>
+        </div>
+        <div class="download-card">
+          <h4>Self-Guided Startup Playbook</h4>
+          <p>The first chapter of our operational scaling framework.</p>
+          <span class="dl-type">PDF &middot; Free Sample</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-about">
+  <section style="padding-top:110px">
+    <div class="container">
+      <div class="section-label">About</div>
+      <h2 class="section-title">Consulting practice. Venture studio. Human-systems company.</h2>
+
+      <div class="about-content">
+        <p>Kombra Group was founded by Michelle Bangura &mdash; a first-generation American with parents from Sierra Leone &mdash; to do two things simultaneously: fix the operational problems that hold organizations back, and build new ventures that solve those problems at scale.</p>
+
+        <p>The consulting practice brings 20 years of enterprise architecture and operational leadership across 15+ industries, 4 continents, and $500M+ in programs.</p>
+
+        <div class="about-highlight">The consulting funds and informs the ventures. The ventures test and prove the operational frameworks. Each strengthens the other. This is what we mean by "The Profit of Progress."</div>
+
+        <p><strong>Entity:</strong> Delaware C-Corp. SAM.gov registered.</p>
+        <p><strong>Founder:</strong> Michelle Bangura &mdash; Operator, builder, founder. <a href="https://michellebglobal.com" style="color:var(--copper)" target="_blank">michellebglobal.com &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page" id="page-contact">
+  <section style="padding-top:110px">
+    <div class="container">
+      <div class="section-label">Get started</div>
+      <h2 class="section-title">Tell us what's not working.</h2>
+
+      <div class="contact-grid">
+        <div>
+          <div class="contact-method"><label>Email</label><a href="mailto:hello@kombragroup.com">hello@kombragroup.com</a></div>
+          <div class="contact-method"><label>Phone</label><span>+1 415-226-9566</span></div>
+          <div class="contact-method"><label>Founder</label><a href="https://michellebglobal.com" target="_blank">michellebglobal.com</a></div>
+        </div>
+        <div>
+          <div class="contact-method"><label>What brings you here?</label></div>
+          <ul class="intake-form">
+            <li>I need consulting help (any size business)</li>
+            <li>I'm interested in the Accelerator Light Cohort</li>
+            <li>I'm an early-stage founder seeking a technical co-builder</li>
+            <li>I need to win a government contract</li>
+            <li>I'm interested in the venture studio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-name">Kombra Group</div>
+    <p>Systems that work. Ventures that last.</p>
+    <p style="margin-top:.75rem;font-size:.65rem">&copy; 2026 Kombra Group Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  var n=document.getElementById('nav-'+id);if(n)n.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggleMenu(){
+  var l=document.querySelector('.nav-links');
+  var btn=document.querySelector('.menu-btn');
+  if(l.classList.contains('open')){
+    l.classList.remove('open');
+    l.style.display='none';
+    btn.classList.remove('open');
+  } else {
+    l.classList.add('open');
+    l.style.display='flex';
+    l.style.flexDirection='column';
+    l.style.position='absolute';
+    l.style.top='100%';
+    l.style.left='0';
+    l.style.right='0';
+    l.style.background='var(--warm-white)';
+    l.style.padding='1.5rem';
+    l.style.gap='1rem';
+    l.style.boxShadow='0 8px 24px rgba(0,0,0,.08)';
+    btn.classList.add('open');
+  }
+}
+document.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click',function(){
+    if(window.innerWidth<768){
+      var l=document.querySelector('.nav-links');
+      var b=document.querySelector('.menu-btn');
+      l.classList.remove('open');
+      l.style.display='none';
+      b.classList.remove('open');
+    }
+  });
+});
+</script>
+</body>
+</html>
