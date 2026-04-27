@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kombra Group | Systems That Work. Ventures That Last.</title>
+<meta property="og:title" content="Kombra Group — AI Enterprise Consulting &amp; Venture Studio">
+<meta property="og:description" content="Kombra Group is a consulting practice and AI-powered venture studio. Delaware C-Corp. We diagnose and fix operational problems for clients and build our own ventures using the same discipline.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kombragroup.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -43,7 +47,8 @@ section{padding:5rem 2rem}
 .hero-path:hover{border-color:var(--copper);background:rgba(184,115,51,.06)}
 .hero-path h3{font-family:var(--font-display);font-size:1.1rem;color:white;margin-bottom:.35rem;font-weight:400}
 .hero-path p{font-size:.85rem;color:rgba(255,255,255,.45);margin:0}
-.hero-path .arrow{color:var(--copper);font-size:.8rem;margin-top:.5rem;display:block}
+.hero-path .arrow{display:inline-block;margin-top:.75rem;padding:.4rem 1rem;border:1px solid var(--copper);border-radius:5px;color:var(--copper);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:1px;transition:all .2s}
+.hero-path:hover .arrow{background:var(--copper);color:var(--navy)}
 
 .section-label{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--copper);margin-bottom:.75rem}
 .section-title{font-family:var(--font-display);font-size:clamp(1.7rem,3.2vw,2.2rem);color:var(--navy);margin-bottom:.75rem;font-weight:400}
@@ -93,6 +98,8 @@ section{padding:5rem 2rem}
 .download-card h4{font-family:var(--font-display);font-size:1rem;color:var(--navy);font-weight:400;margin-bottom:.3rem}
 .download-card p{font-size:.8rem;color:var(--warm-gray)}
 .download-card .dl-type{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--copper);margin-top:.5rem}
+.download-card .dl-type a{color:var(--copper);text-decoration:none;font-weight:600}
+.download-card .dl-type a:hover{text-decoration:underline}
 
 /* ABOUT */
 .about-content{max-width:620px}
@@ -137,6 +144,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
     <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('downloads')" id="nav-downloads">Downloads</a></li>
     <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('about')" id="nav-about">About</a></li>
     <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" id="nav-contact">Contact</a></li>
+    <li><a href="/blog/">Blog</a></li>
   </ul>
   <a href="javascript:void(0)" class="nav-cta" onclick="event.preventDefault();showPage('contact')">Get started</a>
   <button class="menu-btn" onclick="toggleMenu()"><span></span><span></span><span></span></button>
@@ -199,8 +207,22 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
         <p style="font-size:.88rem;color:var(--charcoal)"><strong style="color:var(--navy)">Narrative that sells:</strong> We translate complex architecture into the user's language. Every competitive proposal we've led has made the shortlist.</p>
       </div>
 
+      <div class="service-category" style="padding:1.5rem;background:var(--navy);border-radius:12px;margin-bottom:2rem">
+        <h3 style="color:white"><span style="color:var(--copper)">●</span> AI Enterprise Sales Diagnostic</h3>
+        <p style="color:rgba(255,255,255,.6);padding-left:0">For AI companies competing against entrenched enterprise incumbents. Six weeks. $40,000. Sixteen deliverables.</p>
+        <div class="service-list" style="padding-left:0">
+          <div class="service-item" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1);color:white">Sales motion diagnostic &amp; friction map</div>
+          <div class="service-item" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1);color:white">Competitive displacement playbook (40-60 pages)</div>
+          <div class="service-item" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1);color:white">Discovery question bank (100+ questions)</div>
+          <div class="service-item" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1);color:white">8 competitive battlecards + objection scripts</div>
+          <div class="service-item" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1);color:white">AI-native sales process design</div>
+          <div class="service-item" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1);color:white">Team enablement + 90-day execution plan</div>
+        </div>
+        <p style="color:var(--copper);font-size:.85rem;font-weight:600;margin-top:1rem;padding-left:0">ROI: 69:1 conservative. Payback: one additional deal closed.</p>
+      </div>
+
       <div class="service-category">
-        <h3>My operation is broken</h3>
+        <h3>My operation is broken <span style="font-size:.75rem;color:var(--copper);font-weight:600;margin-left:.5rem">from $5,000</span></h3>
         <p>For organizations where the work isn't flowing, teams aren't aligned, or programs are off the rails.</p>
         <div class="service-list">
           <div class="service-item">Fractional COO / VP of Operations</div>
@@ -213,7 +235,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
       </div>
 
       <div class="service-category">
-        <h3>I need technology leadership</h3>
+        <h3>I need technology leadership <span style="font-size:.75rem;color:var(--copper);font-weight:600;margin-left:.5rem">from $5,000</span></h3>
         <p>For companies that need senior technical strategy without a full-time executive hire.</p>
         <div class="service-list">
           <div class="service-item">Fractional CTO / Chief Architect</div>
@@ -226,7 +248,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
       </div>
 
       <div class="service-category">
-        <h3>I need AI but don't know where to start</h3>
+        <h3>I need AI but don't know where to start <span style="font-size:.75rem;color:var(--copper);font-weight:600;margin-left:.5rem">from $5,000</span></h3>
         <p>For organizations that want to use AI effectively &mdash; not just experimentally.</p>
         <div class="service-list">
           <div class="service-item">AI readiness assessment</div>
@@ -239,7 +261,20 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
       </div>
 
       <div class="service-category">
-        <h3>I need to get my business online or modernized</h3>
+        <h3>My AI deployment needs change management <span style="font-size:.75rem;color:var(--copper);font-weight:600;margin-left:.5rem">$13&ndash;25/employee</span></h3>
+        <p>Every AI deployment creates a workforce that needs structured support. We provide it at $13-25 per employee.</p>
+        <div class="service-list">
+          <div class="service-item">Workforce transition workbook program</div>
+          <div class="service-item">AI-adjacent role redefinition</div>
+          <div class="service-item">Change leader enablement</div>
+          <div class="service-item">Implementation partner field guide</div>
+          <div class="service-item">Custom institutional workbook production</div>
+          <div class="service-item">Enterprise licensing ($49-199/seat/year)</div>
+        </div>
+      </div>
+
+      <div class="service-category">
+        <h3>I need to get my business online or modernized <span style="font-size:.75rem;color:var(--copper);font-weight:600;margin-left:.5rem">from $5,000</span></h3>
         <p>For local and small businesses that need functional digital systems &mdash; not just a website.</p>
         <div class="service-list">
           <div class="service-item">Digital presence &amp; website redesign</div>
@@ -252,7 +287,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
       </div>
 
       <div class="service-category">
-        <h3>I'm a founder and need a technical partner</h3>
+        <h3>I'm a founder and need a technical partner <span style="font-size:.75rem;color:var(--copper);font-weight:600;margin-left:.5rem">from $5,000</span></h3>
         <p>For founders who need a builder-operator &mdash; without giving up equity.</p>
         <div class="service-list">
           <div class="service-item">Technical co-founder alternative</div>
@@ -265,7 +300,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
       </div>
 
       <div class="service-category">
-        <h3>I need to win a government contract</h3>
+        <h3>I need to win a government contract <span style="font-size:.75rem;color:var(--copper);font-weight:600;margin-left:.5rem">from $5,000</span></h3>
         <p>100% shortlist rate across two firms. We know how to win.</p>
         <div class="service-list">
           <div class="service-item">RFP / RFI / RFQ response strategy</div>
@@ -293,7 +328,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
       <div class="venture-thesis">
         <h3>The Kombra thesis</h3>
         <p>Every consulting engagement teaches us where systems are broken. We take those insights and build ventures that fix the problem at scale &mdash; not for one client, but for the market.</p>
-        <div class="thesis-point">Consulting → platform thinking: one-off solutions become configurable, scalable products</div>
+        <div class="thesis-point">Consulting &rarr; platform thinking: one-off solutions become configurable, scalable products</div>
         <div class="thesis-point">Shared infrastructure across ventures (knowledge systems, AI tooling, operational frameworks)</div>
         <div class="thesis-point">Self-first: we build for ourselves, validate, then productize</div>
         <div class="thesis-point">Enterprise-grade compliance and governance from day one</div>
@@ -307,6 +342,12 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
       </div>
 
       <div class="venture-card">
+        <div class="venture-status">Active &mdash; Publishing &amp; Enterprise Change Management</div>
+        <h3>Purpose Built Press</h3>
+        <p>315-title professional development catalog. Structured workbooks for career identity, workplace relationships, AI deployment change management, and workforce transition. Enterprise licensing available &mdash; $13-25 per employee. The change management layer for every AI deployment.</p>
+      </div>
+
+      <div class="venture-card">
         <div class="venture-status">Active &mdash; International development</div>
         <h3>Africa Tomorrow</h3>
         <p>Sustainable community infrastructure in Sierra Leone. Integrated land-use architecture spanning aquaculture, livestock, housing, and water systems. The hardest human-systems challenge in our portfolio &mdash; and the one with the highest long-term impact.</p>
@@ -315,7 +356,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
       <div class="venture-card">
         <div class="venture-status">In development</div>
         <h3>Community &amp; caregiving platforms</h3>
-        <p>AI-powered tools for intentional community building and caregiver support. Applying the "Profit in Progress" philosophy &mdash; profitability as the engine for sustainable social impact.</p>
+        <p>AI-powered tools for intentional community building and caregiver support. Applying the "Profit of Progress" philosophy &mdash; profitability as the engine for sustainable social impact.</p>
       </div>
 
       <p style="margin-top:2rem;font-size:.95rem;color:var(--warm-gray)">We're selectively open to conversations with aligned investors and strategic partners. <a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" style="color:var(--copper)">Reach out &rarr;</a></p>
@@ -404,14 +445,19 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
 
       <div class="download-grid">
         <div class="download-card">
+          <h4>Kombra Services Menu</h4>
+          <p>12 services with descriptions and pricing. Print or share.</p>
+          <div class="dl-type"><a href="/assets/Kombra_Services.pdf">Download PDF</a></div>
+        </div>
+        <div class="download-card">
+          <h4>AI Enterprise Sales Diagnostic</h4>
+          <p>Six weeks. $40,000. Sixteen deliverables. The displacement playbook for AI companies competing against ServiceNow and SAP.</p>
+          <div class="dl-type"><a href="/assets/SymphonyAI_LeaveBehind.pdf">Download One-Pager</a></div>
+        </div>
+        <div class="download-card">
           <h4>Fractional COO overview</h4>
           <p>What changes when we embed as your operational leader. Scope, timeline, outcomes.</p>
           <span class="dl-type">PDF &middot; One-pager</span>
-        </div>
-        <div class="download-card">
-          <h4>Consulting services overview</h4>
-          <p>Full catalog of engagement types from enterprise transformation to small business modernization.</p>
-          <span class="dl-type">PDF &middot; Overview</span>
         </div>
         <div class="download-card">
           <h4>AI readiness checklist</h4>
@@ -445,7 +491,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
 
         <p>The consulting practice brings 20 years of enterprise architecture and operational leadership across 15+ industries, 4 continents, and $500M+ in programs. We've rescued failing government modernizations, built platforms used by millions, and designed operational systems for everything from precious metals trading to predictive aviation maintenance to pandemic response infrastructure.</p>
 
-        <p>The venture studio takes the insights from that work and builds businesses. Every consulting engagement reveals where systems are broken. We don't just solve for the immediate problem &mdash; we identify patterns, design reusable modules, and build ventures that fix the break at scale. Consulting → platform thinking → product.</p>
+        <p>The venture studio takes the insights from that work and builds businesses. Every consulting engagement reveals where systems are broken. We don't just solve for the immediate problem &mdash; we identify patterns, design reusable modules, and build ventures that fix the break at scale. Consulting &rarr; platform thinking &rarr; product.</p>
 
         <div class="about-highlight">The consulting funds and informs the ventures. The ventures test and prove the operational frameworks. Each strengthens the other. This is what we mean by "The Profit of Progress."</div>
 
@@ -502,7 +548,7 @@ footer .footer-name{font-family:var(--font-display);font-size:1rem;color:rgba(25
     <div class="footer-name">Kombra Group</div>
     <p>Systems that work. Ventures that last.</p>
     <p style="margin-top:.6rem"><a href="https://michellebglobal.com" target="_blank">Michelle Bangura</a> &nbsp;&middot;&nbsp; <a href="https://linkedin.com/in/michellebangura" target="_blank">LinkedIn</a></p>
-    <p style="margin-top:.75rem;font-size:.65rem">&copy; 2026 Kombra Group Inc. All rights reserved.</p>
+    <p style="margin-top:.75rem;font-size:.65rem">&copy; 2026 Kombra Group Inc. Delaware C-Corp. SAM.gov Registered. Federal Procurement Ready.</p>
   </div>
 </footer>
 
