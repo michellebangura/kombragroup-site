@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kombra Group | Systems That Work. Ventures That Last.</title>
 <meta name="description" content="Kombra Group is an AI-powered venture studio and enterprise systems consulting practice. Parent company of Purpose Built Compliance, Heritage Vault, Purpose Built Press, and Name It First.">
-<meta property="og:title" content="Kombra Group — Systems That Work. Ventures That Last.">
+<meta property="og:title" content="Kombra Group | Systems That Work. Ventures That Last.">
 <meta property="og:description" content="Venture studio &amp; enterprise systems architecture. Parent operating company of Purpose Built Compliance, Heritage Vault, Purpose Built Press, and Name It First.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kombragroup.com">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B1322'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' text-anchor='middle' fill='%23E09B59'%3EK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -21,13 +23,15 @@
   --navy-light:#28436A;
   --copper:#C67D3A;
   --copper-light:#E09B59;
+  --copper-ink:#9A5B23;
   --gold:#D4AF37;
   --gold-dim:#9E8226;
+  --gold-ink:#7A6519;
   --sand:#E8DCC4;
   --warm-white:#FBF9F5;
   --cream:#F4EFE6;
   --charcoal:#22252A;
-  --warm-gray:#6E737B;
+  --warm-gray:#5E636B;
   --text-muted:#8F95A0;
   --teal:#2D6A5E;
   --teal-light:#3FA894;
@@ -125,7 +129,7 @@ section{padding:5.5rem 1.75rem}
   font-weight:600;
   text-transform:uppercase;
   letter-spacing:3px;
-  color:var(--copper);
+  color:var(--copper-ink);
   margin-bottom:0.8rem;
   display:inline-flex;align-items:center;gap:8px;
 }
@@ -256,7 +260,7 @@ section{padding:5.5rem 1.75rem}
 }
 .stat-item .stat-lbl{
   font-size:0.8rem;
-  color:rgba(255,255,255,0.55);
+  color:rgba(255,255,255,0.72);
   line-height:1.4;
 }
 
@@ -306,8 +310,8 @@ section{padding:5.5rem 1.75rem}
   color:var(--teal);
   border:1px solid rgba(45,106,94,0.25);
 }
-.venture-badge.live{background:rgba(136,192,87,0.12);color:#3D8A27;border-color:rgba(136,192,87,0.3)}
-.venture-badge.lms{background:rgba(212,175,55,0.12);color:#9E8226;border-color:rgba(212,175,55,0.3)}
+.venture-badge.live{background:rgba(136,192,87,0.12);color:#2F6E1F;border-color:rgba(136,192,87,0.3)}
+.venture-badge.lms{background:rgba(212,175,55,0.12);color:var(--gold-ink);border-color:rgba(212,175,55,0.3)}
 .venture-card h3{
   font-family:var(--font-display);
   font-size:1.6rem;
@@ -318,7 +322,7 @@ section{padding:5.5rem 1.75rem}
 .venture-card p.subtitle{
   font-family:var(--font-mono);
   font-size:0.8rem;
-  color:var(--copper);
+  color:var(--copper-ink);
   margin-bottom:1rem;
   font-weight:600;
 }
@@ -352,7 +356,7 @@ section{padding:5.5rem 1.75rem}
   padding-top:0.5rem;
   border-top:1px solid rgba(212,197,169,0.3);
 }
-.venture-link:hover{color:var(--copper)}
+.venture-link:hover{color:var(--copper-ink)}
 
 /* THE STUDIO THESIS */
 .thesis-box{
@@ -363,7 +367,7 @@ section{padding:5.5rem 1.75rem}
   margin:3rem 0;
   border:1px solid rgba(212,175,55,0.2);
 }
-.thesis-box h3{
+.thesis-box h2,.thesis-box h3{
   font-family:var(--font-display);
   font-size:1.8rem;
   color:var(--cream);
@@ -387,7 +391,7 @@ section{padding:5.5rem 1.75rem}
   border-radius:8px;
   padding:1.5rem;
 }
-.thesis-pillar h4{
+.thesis-pillar h3,.thesis-pillar h4{
   font-family:var(--font-mono);
   font-size:0.85rem;
   color:var(--gold);
@@ -423,12 +427,12 @@ section{padding:5.5rem 1.75rem}
   font-family:var(--font-mono);
   font-size:0.7rem;
   font-weight:600;
-  color:var(--copper);
+  color:var(--copper-ink);
   text-transform:uppercase;
   letter-spacing:1px;
   margin-bottom:0.6rem;
 }
-.service-card h3{
+.service-card h2{
   font-family:var(--font-display);
   font-size:1.35rem;
   color:var(--navy-dark);
@@ -512,7 +516,7 @@ section{padding:5.5rem 1.75rem}
   border-radius:12px;
   border:1px solid rgba(212,175,55,0.25);
 }
-.kombra-panel h4{
+.kombra-panel h2{
   font-family:var(--font-display);
   font-size:1.5rem;
   color:var(--cream);
@@ -544,7 +548,7 @@ section{padding:5.5rem 1.75rem}
   padding:clamp(2rem,4vw,3.5rem);
   box-shadow:var(--shadow-md);
 }
-.contact-info h3{
+.contact-info h2{
   font-family:var(--font-display);
   font-size:1.8rem;
   color:var(--navy-dark);
@@ -567,12 +571,12 @@ section{padding:5.5rem 1.75rem}
   text-decoration:none;
   font-weight:500;
 }
-.contact-item a:hover{color:var(--copper)}
+.contact-item a:hover{color:var(--copper-ink)}
 
 /* FOOTER */
 footer{
   background:var(--navy-dark);
-  color:rgba(255,255,255,0.45);
+  color:rgba(255,255,255,0.7);
   padding:4rem 2rem 3rem;
   font-size:0.85rem;
   border-top:1px solid rgba(212,175,55,0.15);
@@ -593,7 +597,7 @@ footer{
   line-height:1.6;
   max-width:320px;
 }
-.footer-col h5{
+.footer-col h3{
   font-family:var(--font-mono);
   font-size:0.72rem;
   font-weight:600;
@@ -621,6 +625,26 @@ footer{
   font-size:0.72rem;
 }
 
+/* ACCESSIBILITY */
+.skip-link{
+  position:fixed;top:-100px;left:1rem;z-index:1100;
+  background:var(--navy-dark);color:#ffffff;
+  font-family:var(--font-mono);font-size:0.8rem;
+  padding:0.6rem 1rem;border-radius:4px;text-decoration:none;
+}
+.skip-link:focus{top:1rem}
+:focus-visible{outline:3px solid var(--navy-light);outline-offset:3px}
+nav :focus-visible,footer :focus-visible,.hero-section :focus-visible,.thesis-box :focus-visible,.kombra-panel :focus-visible{outline-color:var(--gold)}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:0.01ms !important;animation-duration:0.01ms !important}
+}
+@media(max-width:520px){
+  nav{padding:0 1rem}
+  .nav-mark .tag{display:none}
+  .nav-cta{padding:0.55rem 0.9rem;font-size:0.66rem;letter-spacing:1px}
+}
+
 @media(max-width:900px){
   .about-split,.contact-wrap,.footer-grid{grid-template-columns:1fr;gap:2rem}
   .nav-links{display:none}
@@ -632,23 +656,27 @@ footer{
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <!-- NAVIGATION -->
-<nav>
-  <a href="javascript:void(0)" class="nav-mark" onclick="event.preventDefault();showPage('home')">
+<nav aria-label="Primary">
+  <a href="#home" class="nav-mark">
     kombra<span>group</span>
     <span class="tag">Venture Studio</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('home')" class="active" id="nav-home">Home</a></li>
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('ventures')" id="nav-ventures">Live Ventures</a></li>
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('services')" id="nav-services">Advisory</a></li>
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('work')" id="nav-work">Track Record</a></li>
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('about')" id="nav-about">About</a></li>
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" id="nav-contact">Contact</a></li>
+  <ul class="nav-links" id="primary-nav">
+    <li><a href="#home" class="active" id="nav-home">Home</a></li>
+    <li><a href="#ventures" id="nav-ventures">Live Ventures</a></li>
+    <li><a href="#services" id="nav-services">Advisory</a></li>
+    <li><a href="#work" id="nav-work">Track Record</a></li>
+    <li><a href="#about" id="nav-about">About</a></li>
+    <li><a href="#contact" id="nav-contact">Contact</a></li>
   </ul>
-  <a href="javascript:void(0)" class="nav-cta" onclick="event.preventDefault();showPage('contact')">Connect &rarr;</a>
-  <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  <a href="#contact" class="nav-cta">Connect &rarr;</a>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
 </nav>
+
+<main id="main">
 
 <!-- ========================================================================= -->
 <!-- 1. HOME PAGE -->
@@ -665,12 +693,12 @@ footer{
       <h1>We build systems that work.<br>We build businesses that <em>last</em>.</h1>
       
       <p class="lead">
-        Kombra Group is an enterprise systems consulting practice and autonomous venture studio. We diagnose and fix mission-critical operational architecture for clients &mdash; and we build our own category-defining commercial ventures using the exact same operational discipline.
+        Kombra Group is an enterprise systems consulting practice and autonomous venture studio. We diagnose and fix mission-critical operational architecture for clients, and we build our own category-defining commercial ventures using the exact same operational discipline.
       </p>
 
       <div class="hero-cta-group">
-        <button class="btn-primary" onclick="showPage('ventures')">Explore Live Ventures &rarr;</button>
-        <button class="btn-outline" onclick="showPage('services')">Enterprise Advisory &rarr;</button>
+        <a href="#ventures" class="btn-primary">Explore Live Ventures &rarr;</a>
+        <a href="#services" class="btn-outline">Enterprise Advisory &rarr;</a>
       </div>
 
       <div class="hero-stats">
@@ -709,7 +737,7 @@ footer{
           <div>
             <div class="venture-header">
               <span class="venture-badge lms">Live Venture &bull; Accredited LMS</span>
-              <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--gold-dim);font-weight:600">CE &bull; REGULATORY</span>
+              <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--gold-ink);font-weight:600">CE &bull; REGULATORY</span>
             </div>
             <h3>Purpose Built Compliance</h3>
             <p class="subtitle">purposebuiltcompliance.com</p>
@@ -753,12 +781,12 @@ footer{
           <div>
             <div class="venture-header">
               <span class="venture-badge live">Live Venture &bull; Publishing House</span>
-              <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--copper);font-weight:600">1,200+ TITLES</span>
+              <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--copper-ink);font-weight:600">1,200+ TITLES</span>
             </div>
             <h3>Purpose Built Press</h3>
             <p class="subtitle">purposebuiltpress.com</p>
             <p class="desc">
-              Clinical research-backed self-knowledge tools &mdash; guided workbooks, reflection journals, and structured conversation frameworks. Designed to produce tangible, signed behavioral agreements across relationships, neurodivergence, family stabilization, and career transitions.
+              Clinical research-backed self-knowledge tools: guided workbooks, reflection journals, and structured conversation frameworks. Designed to produce tangible, signed behavioral agreements across relationships, neurodivergence, family stabilization, and career transitions.
             </p>
             <div class="venture-meta">
               <div><strong>Catalog:</strong> 1,200+ structured non-fiction titles &bull; Modular derivation pipeline</div>
@@ -850,31 +878,31 @@ footer{
   <section style="padding-top:120px">
     <div class="container">
       <div class="section-label">Autonomous Venture Studio</div>
-      <h2 class="section-title">We don't just advise businesses. We build them.</h2>
+      <h1 class="section-title">We don't just advise businesses. We build them.</h1>
       <p class="section-intro">
-        Kombra Group applies 20 years of enterprise architecture, regulatory mastery, and operational rigor to launch commercial ventures that address recurring market failures &mdash; powered by AI and proven software foundations.
+        Kombra Group applies 20 years of enterprise architecture, regulatory mastery, and operational rigor to launch commercial ventures that address recurring market failures, powered by AI and proven software foundations.
       </p>
 
       <div class="thesis-box" style="margin-top:0;margin-bottom:3.5rem">
-        <h3>The Studio Doctrine: "The Profit of Progress"</h3>
+        <h2>The Studio Doctrine: "The Profit of Progress"</h2>
         <p class="thesis-lead">
           Profitability is the only sustainable engine for long-term human and social impact. We do not build speculative novelties; we build durable, revenue-producing systems that customers pay for on day one.
         </p>
         <div class="thesis-pillars">
           <div class="thesis-pillar">
-            <h4>Consulting &rarr; Product</h4>
+            <h3>Consulting &rarr; Product</h3>
             <p>One-off advisory insights are formalized into modular, configurable products sold nationally.</p>
           </div>
           <div class="thesis-pillar">
-            <h4>Shared Data Lake</h4>
+            <h3>Shared Data Lake</h3>
             <p>Unified Supabase architecture powers content derivation, identity verification, and telemetry.</p>
           </div>
           <div class="thesis-pillar">
-            <h4>Self-First Validation</h4>
+            <h3>Self-First Validation</h3>
             <p>We build systems for our own operational use, stress-test them, and then take them to market.</p>
           </div>
           <div class="thesis-pillar">
-            <h4>Regulatory Safe Harbor</h4>
+            <h3>Regulatory Safe Harbor</h3>
             <p>Compliance, auditability, and legal statutory alignment are baked into every venture on day one.</p>
           </div>
         </div>
@@ -981,7 +1009,7 @@ footer{
   <section style="padding-top:120px">
     <div class="container">
       <div class="section-label">Enterprise Architecture &amp; Advisory</div>
-      <h2 class="section-title">Every business has operational friction. We eliminate it.</h2>
+      <h1 class="section-title">Every business has operational friction. We eliminate it.</h1>
       <p class="section-intro">
         People first. Process second. Technology third. We diagnose the human and systemic bottlenecks underneath operational failures and design architectures that teams maintain long after we leave.
       </p>
@@ -989,7 +1017,7 @@ footer{
       <div class="service-grid">
         <div class="service-card" style="background:var(--navy-dark);color:#ffffff;border-color:var(--copper)">
           <div class="service-tag" style="color:var(--copper-light)">Flagship Offering</div>
-          <h3 style="color:#ffffff">AI Enterprise Sales Diagnostic</h3>
+          <h2 style="color:#ffffff">AI Enterprise Sales Diagnostic</h2>
           <p style="color:rgba(255,255,255,0.7)">
             For AI platforms competing against entrenched legacy enterprise incumbents. A 6-week diagnostic resolving the specific conversion gaps in your sales architecture.
           </p>
@@ -1003,7 +1031,7 @@ footer{
 
         <div class="service-card">
           <div class="service-tag">High-Velocity Advisory</div>
-          <h3>Deal Acceleration Sprint</h3>
+          <h2>Deal Acceleration Sprint</h2>
           <p>
             Two weeks. Two to three live, active enterprise pipeline opportunities. We apply our diagnostic methodology directly to your live deals to unblock stalled revenue.
           </p>
@@ -1016,7 +1044,7 @@ footer{
 
         <div class="service-card">
           <div class="service-tag">Executive Leadership</div>
-          <h3>Fractional COO / VP Operations</h3>
+          <h2>Fractional COO / VP Operations</h2>
           <p>
             Hands-on operational leadership for organizations where execution is stalled, teams are misaligned, or post-acquisition integrations are bleeding efficiency.
           </p>
@@ -1029,7 +1057,7 @@ footer{
 
         <div class="service-card">
           <div class="service-tag">Technical Architecture</div>
-          <h3>Fractional CTO / Chief Architect</h3>
+          <h2>Fractional CTO / Chief Architect</h2>
           <p>
             Senior technical strategy for scale-ups and enterprises undergoing digital modernization without hiring a full-time multi-million dollar executive suite.
           </p>
@@ -1042,7 +1070,7 @@ footer{
 
         <div class="service-card">
           <div class="service-tag">Artificial Intelligence</div>
-          <h3>AI Governance &amp; Strategy</h3>
+          <h2>AI Governance &amp; Strategy</h2>
           <p>
             Moving enterprise organizations from unstructured AI experimentation to auditable, production-grade operational deployments.
           </p>
@@ -1055,7 +1083,7 @@ footer{
 
         <div class="service-card">
           <div class="service-tag">Government Capture</div>
-          <h3>GovTech &amp; Public Sector Capture</h3>
+          <h2>GovTech &amp; Public Sector Capture</h2>
           <p>
             100% competitive shortlist rate across two firms. We architect proposals that win complex city, state, and federal bids.
           </p>
@@ -1077,52 +1105,52 @@ footer{
   <section style="padding-top:120px">
     <div class="container">
       <div class="section-label">Proven Track Record</div>
-      <h2 class="section-title">$500M+ in mission-critical programs architected and delivered.</h2>
+      <h1 class="section-title">$500M+ in mission-critical programs architected and delivered.</h1>
       <p class="section-intro">
-        From rescuing multi-million dollar state government migrations to architecting high-frequency trading portals &mdash; we design systems that survive real-world scale.
+        From rescuing multi-million dollar state government migrations to architecting high-frequency trading portals. We design systems that survive real-world scale.
       </p>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem">
         <div class="service-card">
           <div class="service-tag">Public Sector &bull; $40M Program</div>
-          <h3>Major Municipal Housing Authority</h3>
+          <h2>Major Municipal Housing Authority</h2>
           <p>Modernized enterprise platform serving 400,000+ residents. Migrated legacy mainframe to cloud, streamlined tenant lifecycle intake, and automated federal HUD compliance reporting.</p>
-          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper);font-weight:600">Result: 40% reduction in maintenance cycle time &bull; Full federal audit readiness</div>
+          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper-ink);font-weight:600">Result: 40% reduction in maintenance cycle time &bull; Full federal audit readiness</div>
         </div>
 
         <div class="service-card">
           <div class="service-tag">Elections &bull; State Government</div>
-          <h3>State Board of Elections &mdash; Voter &amp; Finance Platform</h3>
+          <h2>State Board of Elections: Voter &amp; Finance Platform</h2>
           <p>Architected zero-trust voter registration platform, public campaign finance matching engine, automated fraud detection, and multi-factor identity verification.</p>
-          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper);font-weight:600">Result: 85% reduction in manual verification &bull; Complete audit trail</div>
+          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper-ink);font-weight:600">Result: 85% reduction in manual verification &bull; Complete audit trail</div>
         </div>
 
         <div class="service-card">
           <div class="service-tag">Civic Infrastructure</div>
-          <h3>Major City 311 Citizen Services</h3>
+          <h2>Major City 311 Citizen Services</h2>
           <p>End-to-end mobile and web civic intake engine, GIS routing, SLA enforcement dashboards, and multi-channel citizen notification system.</p>
-          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper);font-weight:600">Result: 50% increase in self-service deflection &bull; 30% SLA acceleration</div>
+          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper-ink);font-weight:600">Result: 50% increase in self-service deflection &bull; 30% SLA acceleration</div>
         </div>
 
         <div class="service-card">
           <div class="service-tag">Fintech &bull; Regulated Assets</div>
-          <h3>Precious Metals Institutional Brokerage</h3>
+          <h2>Precious Metals Institutional Brokerage</h2>
           <p>High-reliability pricing engine, automated telephone call recording compliance, secure wealth analytics, and automated physical vault fulfillment.</p>
-          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper);font-weight:600">Result: 35% conversion lift &bull; 100% statutory regulatory compliance</div>
+          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper-ink);font-weight:600">Result: 35% conversion lift &bull; 100% statutory regulatory compliance</div>
         </div>
 
         <div class="service-card">
           <div class="service-tag">Aerospace &bull; Industrial IoT</div>
-          <h3>Commercial Aviation Maintenance Authority</h3>
+          <h2>Commercial Aviation Maintenance Authority</h2>
           <p>Predictive equipment maintenance architecture, telemetry ingestion, automated repair work orders, and parts procurement forecasting.</p>
-          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper);font-weight:600">Result: 25% reduction in unplanned aircraft downtime</div>
+          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper-ink);font-weight:600">Result: 25% reduction in unplanned aircraft downtime</div>
         </div>
 
         <div class="service-card">
           <div class="service-tag">Healthcare &bull; Enterprise CRM</div>
-          <h3>Global Health Insurance Conglomerate</h3>
+          <h2>Global Health Insurance Conglomerate</h2>
           <p>Comprehensive audit of 50 disparate global Salesforce instances. Established master enterprise data architecture and consolidated integration roadmap.</p>
-          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper);font-weight:600">Result: Multi-million dollar licensing savings &bull; Unified customer record</div>
+          <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--copper-ink);font-weight:600">Result: Multi-million dollar licensing savings &bull; Unified customer record</div>
         </div>
       </div>
     </div>
@@ -1136,7 +1164,7 @@ footer{
   <section style="padding-top:120px">
     <div class="container">
       <div class="section-label">Identity &amp; Philosophy</div>
-      <h2 class="section-title">Venture Studio. Systems Architecture. Human Discipline.</h2>
+      <h1 class="section-title">Venture Studio. Systems Architecture. Human Discipline.</h1>
       
       <div class="about-split">
         <div class="about-text">
@@ -1144,10 +1172,10 @@ footer{
             Kombra Group was founded on an unapologetic belief: <strong>every operational breakdown that recurs across organizations represents an untapped market.</strong> We diagnose the breakdown for our consulting clients, build the decision architecture to solve it, and then productize that architecture into scalable commercial ventures.
           </p>
           <p>
-            For twenty years, our principal architects have operated inside complex enterprise environments &mdash; rescuing multi-million dollar public sector modernizations, re-architecting health systems, and engineering high-volume transactional platforms.
+            For twenty years, our principal architects have operated inside complex enterprise environments, rescuing multi-million dollar public sector modernizations, re-architecting health systems, and engineering high-volume transactional platforms.
           </p>
           <div class="about-quote">
-            "The Profit of Progress: Profitability is not the compromise of social impact &mdash; it is the engine that guarantees it lasts."
+            "The Profit of Progress: Profitability is not the compromise of social impact; it is the engine that guarantees it lasts."
           </div>
           <p>
             Today, that same rigor powers our four active ventures: <strong>Purpose Built Compliance</strong> (accredited regulatory CE &amp; court LMS), <strong>Heritage Vault</strong> (diaspora oral history archive), <strong>Purpose Built Press</strong> (1,200+ clinical workbooks), and <strong>Name It First</strong> (consumer discovery &amp; inquiry).
@@ -1159,18 +1187,18 @@ footer{
 
         <div>
           <div class="kombra-panel">
-            <h4>The Meaning of "Kombra"</h4>
+            <h2>The Meaning of "Kombra"</h2>
             <p>
-              In the Krio and Mende languages of Sierra Leone, <em>Kombra</em> refers to the mother or caregiver &mdash; the one who carries, protects, and nurtures life through vulnerability into strength.
+              In the Krio and Mende languages of Sierra Leone, <em>Kombra</em> refers to the mother or caregiver: the one who carries, protects, and nurtures life through vulnerability into strength.
             </p>
             <p>
               In systems architecture, Kombra represents the steward who carries complex human and organizational systems through chaos until they achieve durable, autonomous maturity.
             </p>
             <div class="kombra-badges">
-              <div class="kombra-badge-item">🏛️ Delaware C-Corporation</div>
-              <div class="kombra-badge-item">📜 SAM.gov Registered Entity</div>
-              <div class="kombra-badge-item">🛡️ Federal &amp; State Procurement Ready</div>
-              <div class="kombra-badge-item">👩🏾‍💼 Founded by Michelle Sterling Bangura</div>
+              <div class="kombra-badge-item"><span aria-hidden="true">🏛️</span> Delaware C-Corporation</div>
+              <div class="kombra-badge-item"><span aria-hidden="true">📜</span> SAM.gov Registered Entity</div>
+              <div class="kombra-badge-item"><span aria-hidden="true">🛡️</span> Federal &amp; State Procurement Ready</div>
+              <div class="kombra-badge-item"><span aria-hidden="true">👩🏾‍💼</span> Founded by Michelle Sterling Bangura</div>
             </div>
           </div>
         </div>
@@ -1186,14 +1214,14 @@ footer{
   <section style="padding-top:120px">
     <div class="container">
       <div class="section-label">Initiate Conversation</div>
-      <h2 class="section-title">Tell us what needs to be solved.</h2>
+      <h1 class="section-title">Tell us what needs to be solved.</h1>
       <p class="section-intro">
-        Whether you require high-stakes enterprise systems consulting, fractional executive leadership, or want to partner with one of our ventures &mdash; we look forward to connecting.
+        Whether you require high-stakes enterprise systems consulting, fractional executive leadership, or want to partner with one of our ventures. We look forward to connecting.
       </p>
 
       <div class="contact-wrap">
         <div class="contact-info">
-          <h3>Direct Channels</h3>
+          <h2>Direct Channels</h2>
           <p style="color:var(--warm-gray);margin-bottom:2rem;line-height:1.6">
             We review incoming inquiries directly and respond within 24 hours.
           </p>
@@ -1220,7 +1248,7 @@ footer{
         </div>
 
         <div>
-          <h4 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:1rem;color:var(--navy-dark)">Engagement Categories</h4>
+          <h3 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:1rem;color:var(--navy-dark)">Engagement Categories</h3>
           <ul class="service-list-items" style="font-size:0.92rem;margin-bottom:2rem">
             <li style="padding:0.6rem 0"><strong>AI Enterprise Sales Diagnostic:</strong> 6-week displacement sprint</li>
             <li style="padding:0.6rem 0"><strong>Fractional Leadership:</strong> Embedded COO / CTO roles</li>
@@ -1230,11 +1258,11 @@ footer{
           </ul>
 
           <div style="background:var(--cream);padding:1.5rem;border-radius:8px;border:1px solid rgba(212,197,169,0.5)">
-            <div style="font-family:var(--font-mono);font-size:0.75rem;font-weight:600;color:var(--copper);text-transform:uppercase;margin-bottom:0.25rem">
+            <div style="font-family:var(--font-mono);font-size:0.75rem;font-weight:600;color:var(--copper-ink);text-transform:uppercase;margin-bottom:0.25rem">
               Immediate Scheduling
             </div>
             <div style="font-size:0.88rem;color:var(--charcoal);line-height:1.5">
-              To request a direct introductory briefing with Michelle Bangura, email <a href="mailto:hello@kombragroup.com?subject=Briefing%20Request" style="color:var(--copper);font-weight:600">hello@kombragroup.com</a> with your organization and focal challenge.
+              To request a direct introductory briefing with Michelle Bangura, email <a href="mailto:hello@kombragroup.com?subject=Briefing%20Request" style="color:var(--copper-ink);font-weight:600">hello@kombragroup.com</a> with your organization and focal challenge.
             </div>
           </div>
         </div>
@@ -1242,6 +1270,8 @@ footer{
     </div>
   </section>
 </div>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -1252,7 +1282,7 @@ footer{
     </div>
 
     <div class="footer-col">
-      <h5>Live Ventures</h5>
+      <h3>Live Ventures</h3>
       <ul>
         <li><a href="https://purposebuiltcompliance.com" target="_blank" rel="noopener noreferrer">Purpose Built Compliance</a></li>
         <li><a href="https://heritage-vault-kappa.vercel.app" target="_blank" rel="noopener noreferrer">Heritage Vault</a></li>
@@ -1262,22 +1292,22 @@ footer{
     </div>
 
     <div class="footer-col">
-      <h5>Studio &amp; Advisory</h5>
+      <h3>Studio &amp; Advisory</h3>
       <ul>
-        <li><a href="javascript:void(0)" onclick="showPage('services')">AI Sales Diagnostic</a></li>
-        <li><a href="javascript:void(0)" onclick="showPage('services')">Fractional COO / CTO</a></li>
-        <li><a href="javascript:void(0)" onclick="showPage('work')">Public Sector Modernization</a></li>
-        <li><a href="javascript:void(0)" onclick="showPage('work')">GovTech Capture</a></li>
+        <li><a href="#services">AI Sales Diagnostic</a></li>
+        <li><a href="#services">Fractional COO / CTO</a></li>
+        <li><a href="#work">Public Sector Modernization</a></li>
+        <li><a href="#work">GovTech Capture</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
-      <h5>Entity</h5>
+      <h3>Entity</h3>
       <ul>
-        <li><a href="javascript:void(0)" onclick="showPage('about')">About Kombra Group</a></li>
+        <li><a href="#about">About Kombra Group</a></li>
         <li><a href="https://michellebglobal.com" target="_blank" rel="noopener noreferrer">Michelle Bangura</a></li>
         <li><a href="https://linkedin.com/in/michellebangura" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
-        <li><a href="javascript:void(0)" onclick="showPage('contact')">Contact &amp; Inquiries</a></li>
+        <li><a href="#contact">Contact &amp; Inquiries</a></li>
       </ul>
     </div>
   </div>
@@ -1289,53 +1319,64 @@ footer{
 </footer>
 
 <script>
+var PAGES=['home','ventures','services','work','about','contact'];
+
 function showPage(id){
+  if(PAGES.indexOf(id)<0) id='home';
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  var target = document.getElementById('page-'+id);
-  if(target){
-    target.classList.add('active');
-  }
-  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>{a.classList.remove('active');a.removeAttribute('aria-current')});
   var n=document.getElementById('nav-'+id);
-  if(n) n.classList.add('active');
+  if(n){n.classList.add('active');n.setAttribute('aria-current','page')}
+  if(location.hash!=='#'+id) history.replaceState(null,'','#'+id);
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-function toggleMenu(){
+function setMenu(open){
   var l=document.querySelector('.nav-links');
   var btn=document.querySelector('.menu-btn');
-  if(l.classList.contains('open')){
+  btn.setAttribute('aria-expanded',open?'true':'false');
+  if(!open){
     l.classList.remove('open');
     l.style.display='none';
     btn.classList.remove('open');
-  } else {
-    l.classList.add('open');
-    l.style.display='flex';
-    l.style.flexDirection='column';
-    l.style.position='absolute';
-    l.style.top='100%';
-    l.style.left='0';
-    l.style.right='0';
-    l.style.background='var(--navy-dark)';
-    l.style.padding='2rem';
-    l.style.gap='1.25rem';
-    l.style.boxShadow='0 12px 32px rgba(0,0,0,0.5)';
-    l.style.borderBottom='1px solid rgba(212,175,55,0.2)';
-    btn.classList.add('open');
+    return;
   }
+  l.classList.add('open');
+  l.style.display='flex';
+  l.style.flexDirection='column';
+  l.style.position='absolute';
+  l.style.top='100%';
+  l.style.left='0';
+  l.style.right='0';
+  l.style.background='var(--navy-dark)';
+  l.style.padding='2rem';
+  l.style.gap='1.25rem';
+  l.style.boxShadow='0 12px 32px rgba(0,0,0,0.5)';
+  l.style.borderBottom='1px solid rgba(212,175,55,0.2)';
+  btn.classList.add('open');
 }
 
-document.querySelectorAll('.nav-links a').forEach(function(a){
-  a.addEventListener('click',function(){
-    if(window.innerWidth<900){
-      var l=document.querySelector('.nav-links');
-      var b=document.querySelector('.menu-btn');
-      l.classList.remove('open');
-      l.style.display='none';
-      b.classList.remove('open');
-    }
-  });
+function toggleMenu(){
+  setMenu(!document.querySelector('.nav-links').classList.contains('open'));
+}
+
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[href^="#"]');
+  if(!a) return;
+  var id=a.getAttribute('href').slice(1);
+  if(PAGES.indexOf(id)<0) return;
+  e.preventDefault();
+  showPage(id);
+  if(window.innerWidth<900) setMenu(false);
 });
+
+window.addEventListener('hashchange',function(){
+  var id=location.hash.slice(1);
+  if(PAGES.indexOf(id)>-1) showPage(id);
+});
+
+if(PAGES.indexOf(location.hash.slice(1))>-1) showPage(location.hash.slice(1));
 </script>
 </body>
 </html>
