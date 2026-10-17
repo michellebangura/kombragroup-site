@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Rules | Kombra Group</title>
+<meta name="description" content="Colors, fonts, spacing and radius used on the Kombra Group site, read from the code.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B1322'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' text-anchor='middle' fill='%23E09B59'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy-dark:#0B1322;--navy:#142238;--navy-light:#28436A;
+  --copper:#C67D3A;--copper-light:#E09B59;--copper-ink:#9A5B23;
+  --gold:#D4AF37;--gold-ink:#7A6519;
+  --sand:#E8DCC4;--warm-white:#FBF9F5;--cream:#F4EFE6;
+  --charcoal:#22252A;--warm-gray:#5E636B;--teal:#2D6A5E;
+  --font-display:'DM Serif Display',Georgia,serif;
+  --font-body:'Instrument Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--charcoal);background:var(--warm-white);line-height:1.65;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:3px solid var(--navy-light);outline-offset:3px}
+a{color:var(--navy);font-weight:600}
+a:hover{color:var(--copper-ink)}
+.skip-link{position:fixed;top:-100px;left:1rem;z-index:10;background:var(--navy-dark);color:#fff;font-family:var(--font-mono);font-size:0.8rem;padding:0.6rem 1rem;border-radius:4px;text-decoration:none}
+.skip-link:focus{top:1rem}
+header{background:var(--navy-dark);color:#fff;padding:1.25rem clamp(1.25rem,4vw,3.5rem);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+header a{font-family:var(--font-display);font-size:1.35rem;color:#fff;text-decoration:none;font-weight:400}
+header a span{color:var(--copper-light);font-style:italic}
+header nav a{font-family:var(--font-mono);font-size:0.75rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.85)}
+header nav a:hover{color:var(--copper-light)}
+main{max-width:1120px;margin:0 auto;padding:4rem clamp(1.25rem,4vw,1.75rem) 4.5rem}
+.label{font-family:var(--font-mono);font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--copper-ink);margin-bottom:0.8rem;display:inline-flex;align-items:center;gap:8px}
+.label::before{content:"";width:12px;height:2px;background:var(--copper)}
+h1{font-family:var(--font-display);font-size:clamp(2rem,3.8vw,2.9rem);color:var(--navy-dark);font-weight:400;line-height:1.2;margin-bottom:1rem}
+h2{font-family:var(--font-display);font-size:1.8rem;color:var(--navy-dark);font-weight:400;line-height:1.25;margin:3.5rem 0 1rem}
+h3{font-family:var(--font-mono);font-size:0.85rem;color:var(--navy);text-transform:uppercase;letter-spacing:1px;margin:2rem 0 0.75rem}
+p,li{font-size:1rem}
+p{margin-bottom:1rem;max-width:72ch}
+.intro{font-size:1.1rem;color:var(--warm-gray);max-width:680px;margin-bottom:2.5rem}
+code{font-family:var(--font-mono);font-size:0.82rem;background:var(--cream);padding:1px 6px;border-radius:4px;color:var(--navy)}
+small{font-size:0.78rem;color:var(--warm-gray)}
+.flag{font-family:var(--font-mono);font-size:0.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--gold-ink);white-space:nowrap}
+.table-wrap{overflow-x:auto;background:#fff;border:1px solid rgba(212,197,169,0.45);border-radius:12px;margin-bottom:1.5rem}
+table{width:100%;border-collapse:collapse;font-size:0.9rem;min-width:520px}
+th,td{text-align:left;padding:0.75rem 1rem;border-bottom:1px solid rgba(212,197,169,0.35);vertical-align:top}
+th{font-family:var(--font-mono);font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--warm-gray);background:var(--cream)}
+tr:last-child td{border-bottom:none}
+.swatch{display:inline-block;width:14px;height:14px;border-radius:4px;border:1px solid rgba(11,19,34,0.25);vertical-align:-2px;margin-right:8px}
+.type-sample{background:#fff;border:1px solid rgba(212,197,169,0.45);border-radius:12px;padding:2rem;margin-bottom:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-bottom:1.5rem}
+.card{background:#fff;border:1px solid rgba(212,197,169,0.45);border-radius:12px;padding:1.5rem}
+.card ul{list-style:none}
+.card li{padding:0.35rem 0;border-bottom:1px solid rgba(212,197,169,0.3)}
+.card li:last-child{border-bottom:none}
+.dark{background:var(--navy-dark);color:#fff;border-radius:12px;padding:2rem;margin-bottom:1.5rem}
+.dark p{color:rgba(255,255,255,0.8)}
+.sample-display{font-family:var(--font-display);font-size:2rem;color:var(--navy-dark);line-height:1.2;margin-bottom:0.5rem}
+.sample-display em{color:var(--copper-ink)}
+.sample-body{font-size:1rem;color:var(--charcoal);line-height:1.65;margin-bottom:0.5rem}
+.sample-mono{font-family:var(--font-mono);font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--copper-ink)}
+.rules li{margin-bottom:0.75rem;max-width:72ch;list-style:none;padding-left:1.25rem;position:relative}
+.rules li::before{content:"";position:absolute;left:0;top:0.6em;width:6px;height:6px;border-radius:50%;background:var(--copper)}
+ul.plain{list-style:none}
+footer{background:var(--navy-dark);color:rgba(255,255,255,0.7);font-size:0.85rem;padding:2rem clamp(1.25rem,4vw,3.5rem);font-family:var(--font-mono);font-size:0.72rem}
+footer a{color:var(--copper-light);font-weight:600}
+@media(max-width:900px){
+  main{padding-top:3rem}
+}
+@media(max-width:520px){
+  header{padding:1rem}
+  header nav{width:100%}
+  h1{font-size:2rem}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+  <a href="/">kombra<span>group</span></a>
+  <nav aria-label="Site">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="label">Reference</div>
+  <h1>Design rules</h1>
+  <p class="intro">Every value on this page was read from the CSS in <code>index.html</code> and <code>blog/*.html</code> at this commit. It describes what the site uses today. Where the code has more than one value for the same role, the page says so.</p>
+
+  <h2>Colors: homepage</h2>
+  <p>Defined as CSS custom properties on <code>:root</code> in <code>index.html</code>. Contrast is computed against the page background (<code>#FBF9F5</code>) and the navy footer (<code>#0B1322</code>). WCAG AA needs at least 4.5:1 for body text.</p>
+  <div class="table-wrap" role="region" aria-label="Homepage color tokens" tabindex="0">
+  <table>
+    <thead><tr><th scope="col">Token</th><th scope="col">Hex</th><th scope="col">Uses</th><th scope="col">Contrast on page</th><th scope="col">Contrast on navy</th><th scope="col">Used for</th></tr></thead>
+    <tbody>
+<tr><td><span class="swatch" style="background:#0B1322" aria-hidden="true"></span><code>--navy-dark</code></td><td><code>#0B1322</code></td><td>14</td><td>17.67:1<br><small>Body text</small></td><td>1.0:1</td><td>Hero and footer backgrounds, thesis box, dark panel, card text on dark.</td></tr>
+<tr><td><span class="swatch" style="background:#142238" aria-hidden="true"></span><code>--navy</code></td><td><code>#142238</code></td><td>4</td><td>15.18:1<br><small>Body text</small></td><td>1.16:1</td><td>Venture meta text, logo chips and nav text on light backgrounds.</td></tr>
+<tr><td><span class="swatch" style="background:#1D3150" aria-hidden="true"></span><code>--navy-mid</code> <span class="flag">Defined, not used</span></td><td><code>#1D3150</code></td><td>0</td><td>12.42:1<br><small>Body text</small></td><td>1.42:1</td><td>Defined only. The hero gradient uses the literal #1D3150 instead.</td></tr>
+<tr><td><span class="swatch" style="background:#28436A" aria-hidden="true"></span><code>--navy-light</code></td><td><code>#28436A</code></td><td>1</td><td>9.5:1<br><small>Body text</small></td><td>1.86:1</td><td>Focus ring on light backgrounds (added with the accessibility pass).</td></tr>
+<tr><td><span class="swatch" style="background:#C67D3A" aria-hidden="true"></span><code>--copper</code></td><td><code>#C67D3A</code></td><td>12</td><td>3.12:1<br><small>Large text or decoration only</small></td><td>5.66:1</td><td>Decoration only on light backgrounds: rules, bullets, hover borders, button gradient start.</td></tr>
+<tr><td><span class="swatch" style="background:#E09B59" aria-hidden="true"></span><code>--copper-light</code></td><td><code>#E09B59</code></td><td>7</td><td>2.22:1<br><small>Decoration only</small></td><td>7.96:1</td><td>Text on dark backgrounds: nav hover, footer links, hero emphasis, focus ring on dark.</td></tr>
+<tr><td><span class="swatch" style="background:#9A5B23" aria-hidden="true"></span><code>--copper-ink</code></td><td><code>#9A5B23</code></td><td>14</td><td>5.13:1<br><small>Body text</small></td><td>3.45:1</td><td>Small copper text on light backgrounds: eyebrow labels, card subtitles, result lines, links.</td></tr>
+<tr><td><span class="swatch" style="background:#D4AF37" aria-hidden="true"></span><code>--gold</code></td><td><code>#D4AF37</code></td><td>8</td><td>2.0:1<br><small>Decoration only</small></td><td>8.83:1</td><td>Accents on dark backgrounds: stat values, badges, footer headings.</td></tr>
+<tr><td><span class="swatch" style="background:#9E8226" aria-hidden="true"></span><code>--gold-dim</code> <span class="flag">Defined, not used</span></td><td><code>#9E8226</code></td><td>0</td><td>3.52:1<br><small>Large text or decoration only</small></td><td>5.02:1</td><td>Defined only. Replaced by --gold-ink for text on light backgrounds.</td></tr>
+<tr><td><span class="swatch" style="background:#7A6519" aria-hidden="true"></span><code>--gold-ink</code></td><td><code>#7A6519</code></td><td>2</td><td>5.39:1<br><small>Body text</small></td><td>3.28:1</td><td>Small gold text on light backgrounds (the CE label on the Purpose Built Compliance card).</td></tr>
+<tr><td><span class="swatch" style="background:#E8DCC4" aria-hidden="true"></span><code>--sand</code> <span class="flag">Defined, not used</span></td><td><code>#E8DCC4</code></td><td>0</td><td>1.29:1<br><small>Decoration only</small></td><td>13.68:1</td><td>Defined only. Borders use the literal rgba(212,197,169) values instead.</td></tr>
+<tr><td><span class="swatch" style="background:#FBF9F5" aria-hidden="true"></span><code>--warm-white</code></td><td><code>#FBF9F5</code></td><td>1</td><td>1.0:1<br><small>Decoration only</small></td><td>17.67:1</td><td>Page background.</td></tr>
+<tr><td><span class="swatch" style="background:#F4EFE6" aria-hidden="true"></span><code>--cream</code></td><td><code>#F4EFE6</code></td><td>5</td><td>1.09:1<br><small>Decoration only</small></td><td>16.22:1</td><td>Alternate section background and the meta boxes inside venture cards.</td></tr>
+<tr><td><span class="swatch" style="background:#22252A" aria-hidden="true"></span><code>--charcoal</code></td><td><code>#22252A</code></td><td>5</td><td>14.62:1<br><small>Body text</small></td><td>1.21:1</td><td>Body text on light backgrounds.</td></tr>
+<tr><td><span class="swatch" style="background:#5E636B" aria-hidden="true"></span><code>--warm-gray</code></td><td><code>#5E636B</code></td><td>5</td><td>5.75:1<br><small>Body text</small></td><td>3.07:1</td><td>Secondary text on light backgrounds (section intros, service descriptions).</td></tr>
+<tr><td><span class="swatch" style="background:#8F95A0" aria-hidden="true"></span><code>--text-muted</code> <span class="flag">Defined, not used</span></td><td><code>#8F95A0</code></td><td>0</td><td>2.86:1<br><small>Decoration only</small></td><td>6.17:1</td><td>Defined only.</td></tr>
+<tr><td><span class="swatch" style="background:#2D6A5E" aria-hidden="true"></span><code>--teal</code></td><td><code>#2D6A5E</code></td><td>3</td><td>5.99:1<br><small>Body text</small></td><td>2.95:1</td><td>Venture badge text and the teal kicker labels.</td></tr>
+<tr><td><span class="swatch" style="background:#3FA894" aria-hidden="true"></span><code>--teal-light</code> <span class="flag">Defined, not used</span></td><td><code>#3FA894</code></td><td>0</td><td>2.76:1<br><small>Decoration only</small></td><td>6.4:1</td><td>Defined only.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Colors: blog</h2>
+  <p>The blog has its own <code>:root</code> block with different values. For example, its navy is <code>#1B2A4A</code> while the homepage navy is <code>#142238</code>. Aligning the two is a separate decision.</p>
+  <div class="table-wrap" role="region" aria-label="Blog color tokens" tabindex="0">
+  <table>
+    <thead><tr><th scope="col">Token</th><th scope="col">Hex</th><th scope="col">Uses</th><th scope="col">Contrast on page</th><th scope="col">Used for</th></tr></thead>
+    <tbody>
+<tr><td><span class="swatch" style="background:#1B2A4A" aria-hidden="true"></span><code>--navy</code></td><td><code>#1B2A4A</code></td><td>28</td><td>12.96:1<br><small>Body text</small></td><td>Article and listing headings, top bar background.</td></tr>
+<tr><td><span class="swatch" style="background:#B87333" aria-hidden="true"></span><code>--copper</code> <span class="flag">Defined, not used</span></td><td><code>#B87333</code></td><td>0</td><td>3.46:1<br><small>Large text or decoration only</small></td><td>Defined only. Text uses --copper-ink (light background) or --copper-light (navy).</td></tr>
+<tr><td><span class="swatch" style="background:#9A5B23" aria-hidden="true"></span><code>--copper-ink</code></td><td><code>#9A5B23</code></td><td>15</td><td>4.91:1<br><small>Body text</small></td><td>Post links, author links, footer links on the warm background.</td></tr>
+<tr><td><span class="swatch" style="background:#E09B59" aria-hidden="true"></span><code>--copper-light</code></td><td><code>#E09B59</code></td><td>21</td><td>2.13:1<br><small>Decoration only</small></td><td>Brand accent and hover states on the navy top bar.</td></tr>
+<tr><td><span class="swatch" style="background:#F7F4EF" aria-hidden="true"></span><code>--warm-white</code></td><td><code>#F7F4EF</code></td><td>7</td><td>1.0:1<br><small>Decoration only</small></td><td>Page background.</td></tr>
+<tr><td><span class="swatch" style="background:#3D3D3A" aria-hidden="true"></span><code>--charcoal</code></td><td><code>#3D3D3A</code></td><td>8</td><td>9.93:1<br><small>Body text</small></td><td>Body text.</td></tr>
+<tr><td><span class="swatch" style="background:#6B6860" aria-hidden="true"></span><code>--warm-gray</code></td><td><code>#6B6860</code></td><td>21</td><td>5.07:1<br><small>Body text</small></td><td>Dates, read times, intro text, footer text.</td></tr>
+<tr><td><span class="swatch" style="background:#D4C5A9" aria-hidden="true"></span><code>--sand</code></td><td><code>#D4C5A9</code></td><td>20</td><td>1.55:1<br><small>Decoration only</small></td><td>Rules and borders.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Hard-coded colors</h2>
+  <p>These appear as literal values instead of tokens. Counts include both CSS and inline styles.</p>
+  <div class="table-wrap" role="region" aria-label="Hard-coded colors" tabindex="0">
+  <table>
+    <thead><tr><th scope="col">Value</th><th scope="col">Occurrences</th></tr></thead>
+    <tbody>
+<tr><td><span class="swatch" style="background:#FFFFFF" aria-hidden="true"></span><code>#FFFFFF</code></td><td>19</td></tr>
+<tr><td><span class="swatch" style="background:#88C057" aria-hidden="true"></span><code>#88C057</code></td><td>2</td></tr>
+<tr><td><span class="swatch" style="background:#1D3150" aria-hidden="true"></span><code>#1D3150</code></td><td>1</td></tr>
+<tr><td><span class="swatch" style="background:#0B1322" aria-hidden="true"></span><code>#0B1322</code></td><td>1</td></tr>
+<tr><td><span class="swatch" style="background:#2F6E1F" aria-hidden="true"></span><code>#2F6E1F</code></td><td>1</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Most of the 19 white values are card backgrounds and text on dark sections. They could move to a <code>--white</code> token. The other values are two live-status greens, a hero gradient stop and one dark-navy literal that matches <code>--navy-dark</code>.</p>
+
+  <h2>Typography</h2>
+  <div class="type-sample">
+    <div class="sample-mono">Eyebrow label, JetBrains Mono 600, uppercase, 0.72rem, 3px tracking</div>
+    <p class="sample-display" style="margin-top:0.75rem">Systems that work. <em>Ventures that last.</em></p>
+    <small>DM Serif Display 400, clamp(2rem, 3.8vw, 2.9rem), line-height 1.2. Italic for emphasis.</small>
+    <p class="sample-body" style="margin-top:1.25rem">Body copy is Instrument Sans with a line height of 1.65 on the homepage and 1.8 on blog articles.</p>
+    <small>Instrument Sans 400, 500, 600 and 700. Falls back to the system UI font.</small>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Families</h3>
+      <ul class="plain">
+        <li><code>DM Serif Display</code>: headings, quotes, logo (Georgia fallback)</li>
+        <li><code>Instrument Sans</code>: body text, descriptions</li>
+        <li><code>JetBrains Mono</code>: nav, buttons, labels, badges, stats (homepage only)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Font sizes in use</h3>
+      <ul class="plain"><li><code>0.75rem</code> <small>used 16 times</small></li><li><code>.75rem</code> <small>used 15 times</small></li><li><code>2rem</code> <small>used 11 times</small></li><li><code>0.7rem</code> <small>used 7 times</small></li><li><code>.95rem</code> <small>used 7 times</small></li><li><code>.8rem</code> <small>used 7 times</small></li><li><code>1rem</code> <small>used 7 times</small></li><li><code>0.8rem</code> <small>used 6 times</small></li><li><code>1.05rem</code> <small>used 6 times</small></li><li><code>.85rem</code> <small>used 6 times</small></li><li><code>0.9rem</code> <small>used 5 times</small></li><li><code>0.72rem</code> <small>used 4 times</small></li></ul>
+    </div>
+    <div class="card">
+      <h3>Line heights in use</h3>
+      <ul class="plain"><li><code>1.8</code> <small>used 7 times</small></li><li><code>1.65</code> <small>used 6 times</small></li><li><code>1.3</code> <small>used 6 times</small></li><li><code>1.6</code> <small>used 3 times</small></li><li><code>1.2</code> <small>used 1 times</small></li><li><code>1.12</code> <small>used 1 times</small></li></ul>
+    </div>
+  </div>
+  <p>The homepage loads the three families from Google Fonts. The stylesheet loads without blocking the first paint. The blog loads the two text families only.</p>
+
+  <h2>Spacing</h2>
+  <p>The code has no spacing scale. Values are written as rem directly. These are the layout values that repeat across the site:</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Layout</h3>
+      <ul class="plain">
+        <li>Section padding: <code>5.5rem 1.75rem</code>, then <code>4rem 1.25rem</code> at 900px and below</li>
+        <li>Container: <code>max-width 1120px</code>, centered</li>
+        <li>Reading width: <code>680px</code> (blog and section intros)</li>
+        <li>Nav height: <code>72px</code>; page content starts at <code>120px</code> to clear it</li>
+        <li>Footer padding: <code>4rem 2rem 3rem</code></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Component padding</h3>
+      <ul class="plain">
+        <li>Venture card: <code>2.5rem 2.25rem</code></li>
+        <li>Service card: <code>2rem</code></li>
+        <li>Thesis box: <code>3rem 2.5rem</code></li>
+        <li>Contact wrapper: <code>clamp(2rem, 4vw, 3.5rem)</code></li>
+        <li>Buttons: <code>0.9rem 2rem</code> (primary and outline)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Gaps and margins</h3>
+      <ul class="plain"><li><code>1rem</code> <small>used 5 times</small></li><li><code>8px</code> <small>used 4 times</small></li><li><code>2rem</code> <small>used 3 times</small></li><li><code>1.5rem</code> <small>used 2 times</small></li><li><code>1.75rem</code> <small>used 2 times</small></li><li><code>3.5rem</code> <small>used 2 times</small></li><li><code>4px</code> <small>used 1 times</small></li><li><code>1.8rem</code> <small>used 1 times</small></li><li><code>1.25rem</code> <small>used 1 times</small></li><li><code>6px</code> <small>used 1 times</small></li></ul>
+      <ul class="plain" style="margin-top:0.75rem"><li><code>2rem</code> <small>used 17 times</small></li><li><code>0</code> <small>used 11 times</small></li><li><code>0 auto</code> <small>used 9 times</small></li><li><code>.5rem</code> <small>used 9 times</small></li><li><code>1.5rem</code> <small>used 7 times</small></li><li><code>0.75rem</code> <small>used 7 times</small></li><li><code>1.2rem</code> <small>used 7 times</small></li><li><code>3rem</code> <small>used 7 times</small></li><li><code>0.25rem</code> <small>used 6 times</small></li><li><code>1rem</code> <small>used 5 times</small></li></ul>
+    </div>
+  </div>
+  <p>Raw padding values found in the code:</p>
+  <ul class="plain" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.5rem 1.5rem;margin-bottom:1.5rem"><li><code>2rem</code> <small>used 8 times</small></li><li><code>4rem 2rem 3rem</code> <small>used 8 times</small></li><li><code>.75rem 2rem</code> <small>used 7 times</small></li><li><code>0.6rem 1.4rem</code> <small>used 5 times</small></li><li><code>0.6rem 0</code> <small>used 5 times</small></li><li><code>3rem</code> <small>used 4 times</small></li><li><code>0.9rem 2rem</code> <small>used 2 times</small></li><li><code>1.5rem</code> <small>used 2 times</small></li><li><code>0 clamp(1.5rem,4vw,3.5rem)</code> <small>used 1 times</small></li><li><code>2px 8px</code> <small>used 1 times</small></li><li><code>6px 0</code> <small>used 1 times</small></li><li><code>8px</code> <small>used 1 times</small></li></ul>
+
+  <h2>Radius</h2>
+  <div class="table-wrap" role="region" aria-label="Border radius values" tabindex="0">
+  <table>
+    <thead><tr><th scope="col">Radius</th><th scope="col">Where it is used</th></tr></thead>
+    <tbody>
+<tr><td><code>4px</code></td><td>Buttons, venture badges, logo chips, code chips, skip link</td></tr>
+<tr><td><code>6px</code></td><td>Venture meta boxes</td></tr>
+<tr><td><code>8px</code></td><td>Thesis pillars, cream callout on the contact page</td></tr>
+<tr><td><code>10px</code></td><td>Service cards</td></tr>
+<tr><td><code>12px</code></td><td>Venture cards, thesis box, Kombra panel, contact form wrapper</td></tr>
+<tr><td><code>100px</code></td><td>Pills: hero badge and the "Venture Studio" tag in the nav</td></tr>
+<tr><td><code>50%</code></td><td>Status dot in the hero badge</td></tr>
+</tbody>
+  </table>
+  </div>
+
+  <h2>Shadows</h2>
+  <ul class="plain">
+<li><code>0 2px 8px rgba(0,0,0,0.06)</code></li>
+<li><code>0 12px 32px rgba(11,19,34,0.08)</code></li>
+<li><code>0 20px 48px rgba(11,19,34,0.14)</code></li>
+  </ul>
+  <p style="margin-top:1rem">Shadows are tokens (<code>--shadow-sm</code>, <code>--shadow-md</code>, <code>--shadow-lg</code>). Cards use <code>sm</code> at rest, <code>md</code> on the service hover, and <code>lg</code> on the venture hover.</p>
+
+  <h2>Breakpoints</h2>
+  <div class="card">
+    <ul class="plain">
+      <li><code>900px</code>: the main layout breakpoint. Multi-column grids become single columns and the nav collapses into the menu button.</li>
+      <li><code>520px</code>: the compact nav. The "Venture Studio" tag is hidden and the Connect button shrinks so the logo, Connect and menu button fit at 380px.</li>
+      <li>Grid auto-fit minimums: <code>180px</code> (hero stats), <code>240px</code> (thesis pillars), <code>320px</code> (venture and service cards).</li>
+    </ul>
+  </div>
+
+  <h2>Rules</h2>
+  <ul class="rules plain">
+    <li>Use <code>--copper-ink</code> for copper text on light backgrounds. Use <code>--copper</code> only for rules, dots, borders and the button gradient.</li>
+    <li>Use <code>--gold-ink</code> for gold text on light backgrounds. Gold text on dark backgrounds uses <code>--gold</code>.</li>
+    <li>Secondary text on light backgrounds uses <code>--warm-gray</code>, which clears 4.5:1 on the page and on the cream sections.</li>
+    <li>Body text on light backgrounds uses <code>--charcoal</code>. Headings use <code>--navy-dark</code>.</li>
+    <li>Radius: 4px for controls and small tags, 12px for the main cards and panels, 100px only for pills.</li>
+    <li>Every page has one <code>h1</code>. Card titles inside a page use <code>h2</code> or <code>h3</code> without skipping a level.</li>
+    <li>Focus is a 3px outline. On dark sections it uses <code>--gold</code>.</li>
+    <li>Motion respects <code>prefers-reduced-motion</code>.</li>
+  </ul>
+
+  <h2>Open items</h2>
+  <ul class="rules plain">
+    <li>Homepage and blog use different palettes. Choose one navy and one copper for both.</li>
+    <li>Several tokens are defined but unused: <code>--navy-mid</code>, <code>--gold-dim</code>, <code>--sand</code> (homepage), <code>--text-muted</code>, <code>--teal-light</code>, and <code>--copper</code> (blog). Remove them or use them.</li>
+    <li>The homepage hero gradient and borders use literal values. Move them to tokens.</li>
+  </ul>
+</main>
+
+<footer>
+  <div>Design rules for kombragroup.com. Values read from the code at this commit.</div>
+</footer>
+</body>
+</html>

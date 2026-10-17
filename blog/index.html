@@ -3,21 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Kombra Group</title>
+<title>Blog | Kombra Group</title>
 <meta name="description" content="Writing on enterprise AI deployment, change management, operational architecture, and the venture studio thesis.">
-<meta property="og:title" content="Blog — Kombra Group">
+<meta property="og:title" content="Blog | Kombra Group">
 <meta property="og:description" content="Writing on enterprise AI deployment, change management, operational architecture, and the venture studio thesis.">
 <meta property="og:type" content="website">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B1322'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' text-anchor='middle' fill='%23E09B59'%3EK%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--navy:#1B2A4A;--copper:#B87333;--warm-white:#F7F4EF;--charcoal:#3D3D3A;--warm-gray:#8B8880;--sand:#D4C5A9;--font-display:'DM Serif Display',Georgia,serif;--font-body:'Instrument Sans','Segoe UI',sans-serif}
+:root{--navy:#1B2A4A;--copper:#B87333;--copper-ink:#9A5B23;--copper-light:#E09B59;--warm-white:#F7F4EF;--charcoal:#3D3D3A;--warm-gray:#6B6860;--sand:#D4C5A9;--font-display:'DM Serif Display',Georgia,serif;--font-body:'Instrument Sans','Segoe UI',sans-serif}
 body{font-family:var(--font-body);color:var(--charcoal);background:var(--warm-white);line-height:1.8;-webkit-font-smoothing:antialiased}
 .topbar{background:var(--navy);padding:.75rem 2rem;display:flex;justify-content:space-between;align-items:center}
 .topbar a{font-family:var(--font-display);color:rgba(255,255,255,.9);text-decoration:none;font-size:.95rem}
-.topbar span{color:var(--copper)}
+.topbar span{color:var(--copper-light)}
 .topbar nav a{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.5);margin-left:1.5rem}
-.topbar nav a:hover{color:var(--copper)}
+.topbar nav a:hover{color:var(--copper-light)}
 .listing{max-width:680px;margin:0 auto;padding:4rem 2rem 3rem}
 .listing h1{font-family:var(--font-display);font-size:2.2rem;color:var(--navy);margin-bottom:.5rem;font-weight:400}
 .listing .intro{font-size:1rem;color:var(--warm-gray);margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:1px solid var(--sand)}
@@ -25,25 +29,28 @@ body{font-family:var(--font-body);color:var(--charcoal);background:var(--warm-wh
 .post-item:last-child{border-bottom:none}
 .post-item h2{font-family:var(--font-display);font-size:1.3rem;font-weight:400;margin-bottom:.35rem}
 .post-item h2 a{color:var(--navy);text-decoration:none}
-.post-item h2 a:hover{color:var(--copper)}
+.post-item h2 a:hover{color:var(--copper-ink)}
 .post-meta{font-size:.75rem;color:var(--warm-gray);margin-bottom:.5rem}
 .post-excerpt{font-size:.9rem;color:var(--charcoal);margin-bottom:.5rem}
-.post-link{font-size:.8rem;font-weight:600;color:var(--copper);text-decoration:none;text-transform:uppercase;letter-spacing:1px}
+.post-link{font-size:.8rem;font-weight:600;color:var(--copper-ink);text-decoration:none;text-transform:uppercase;letter-spacing:1px}
 .post-link:hover{text-decoration:underline}
 footer{text-align:center;padding:2rem;font-size:.75rem;color:var(--warm-gray);border-top:1px solid var(--sand);margin-top:2rem}
-footer a{color:var(--copper);text-decoration:none}
+footer a{color:var(--copper-ink);text-decoration:none}
+.topbar a:focus-visible{outline:3px solid var(--copper-light);outline-offset:3px}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{transition-duration:0.01ms !important}}
 </style>
 </head>
 <body>
-<div class="topbar">
+<header class="topbar">
   <a href="/">kombra<span>group</span></a>
   <nav>
     <a href="/">Home</a>
     <a href="/blog/">Blog</a>
     <a href="https://michellebglobal.com">Michelle Bangura</a>
   </nav>
-</div>
-<div class="listing">
+</header>
+<main class="listing">
   <h1>Writing</h1>
   <p class="intro">On enterprise AI deployment, change management, operational architecture, and the venture studio thesis.</p>
 
@@ -88,7 +95,7 @@ footer a{color:var(--copper);text-decoration:none}
     <p class="post-excerpt">If you're selling AI to enterprises and you're not SAM.gov registered, you're leaving the largest buyer in the world off your prospect list.</p>
     <a href="/blog/sam-gov-registration.html" class="post-link">Read &rarr;</a>
   </div>
-</div>
+</main>
 <footer>
   <a href="/">kombragroup.com</a> · <a href="https://michellebglobal.com">michellebglobal.com</a> · <a href="mailto:hello@kombragroup.com">hello@kombragroup.com</a>
 </footer>
