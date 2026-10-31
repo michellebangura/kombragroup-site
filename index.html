@@ -9,9 +9,8 @@
 <meta property="og:description" content="Venture studio &amp; enterprise systems architecture. Parent operating company of Purpose Built Compliance, Heritage Vault, Purpose Built Press, and Name It First.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kombragroup.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/DMSans-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -31,9 +30,9 @@
   --text-muted:#8F95A0;
   --teal:#2D6A5E;
   --teal-light:#3FA894;
-  --font-display:'DM Serif Display',Georgia,serif;
-  --font-body:'Instrument Sans',-apple-system,BlinkMacSystemFont,sans-serif;
-  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
   --shadow-sm:0 2px 8px rgba(0,0,0,0.06);
   --shadow-md:0 12px 32px rgba(11,19,34,0.08);
   --shadow-lg:0 20px 48px rgba(11,19,34,0.14);
@@ -178,7 +177,7 @@ section{padding:5.5rem 1.75rem}
   margin-bottom:1.75rem;
 }
 .hero-badge span.dot{
-  width:8px;height:8px;border-radius:50%;background:#88C057;box-shadow:0 0 8px #88C057;
+  width:8px;height:8px;border-radius:50%;background:var(--teal-light);box-shadow:0 0 8px var(--teal-light);
 }
 .hero-section h1{
   font-family:var(--font-display);
@@ -306,7 +305,7 @@ section{padding:5.5rem 1.75rem}
   color:var(--teal);
   border:1px solid rgba(45,106,94,0.25);
 }
-.venture-badge.live{background:rgba(136,192,87,0.12);color:#3D8A27;border-color:rgba(136,192,87,0.3)}
+.venture-badge.live{background:rgba(45,106,94,0.12);color:var(--teal);border-color:rgba(45,106,94,0.3)}
 .venture-badge.lms{background:rgba(212,175,55,0.12);color:#9E8226;border-color:rgba(212,175,55,0.3)}
 .venture-card h3{
   font-family:var(--font-display);
@@ -640,6 +639,8 @@ footer{
 .kf-bar a:focus-visible{outline:3px solid var(--kf-accent);outline-offset:2px}
 .kf-copy{color:var(--kf-muted);font-size:12px}
 @media (max-width:380px){.kf-inner{padding:16px}.kf-bar .kf-links{margin-left:0}}
+/* Family type at phone width: IBM Plex Mono runs wider, keep the top bar on one line */
+@media (max-width:480px){.nav-mark .tag{display:none}.nav-cta{white-space:nowrap;padding:0.55rem 0.9rem;letter-spacing:1px}}
 </style>
 </head>
 <body>
