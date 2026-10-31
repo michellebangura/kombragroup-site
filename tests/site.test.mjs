@@ -190,3 +190,8 @@ test('regression: the family bar <nav> is not caught by the fixed main-nav rule'
   // A bare `nav{position:fixed}` rule pinned the legal links over the main nav (found 2026-10-30).
   for (const p of ownPages) assert.doesNotMatch(read(p), /(^|[\s}])nav\s*\{[^}]*position:\s*fixed/m, p);
 });
+
+test('regression: no trailingSlash rewrite, so /dir/ links are served without a pre-gate redirect', () => {
+  // trailingSlash:false sent 308 for /ventures/x/ before the password gate ran (found 2026-10-30).
+  assert.equal(JSON.parse(read('vercel.json')).trailingSlash, undefined);
+});
