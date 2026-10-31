@@ -1,6 +1,6 @@
 # kombragroup.com launch readiness, 2026-10-30
 
-Checked 2026-10-30 22:31 PDT (Mac clock). Branch `launch/wave2-1030`, worktree `/Users/mb/kombragroup-site-wave2`, head `c23f675`. Not pushed to GitHub; production not touched.
+Checked 2026-10-30 22:31 PDT (Mac clock). Branch `launch/wave2-1030`, worktree `/Users/mb/kombragroup-site-wave2`, head `ba243a6` (deployed build `c23f675`; later commits change only the snapshot and this report, neither of which is served). Not pushed to GitHub; production not touched.
 
 Her words: "It's time to launch we can use placeholder covers." ... "do all of the brands have designs aligned to the parents, part of the same family, different collections?" ... "every website also needs a page for investors and partners". Her standard: "best and strongest choices made and shortcuts never taken".
 
