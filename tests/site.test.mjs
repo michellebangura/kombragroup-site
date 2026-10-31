@@ -104,6 +104,8 @@ test('no false or private claims on any page this branch owns', () => {
   const banned = [
     /Live Venture/i, /Live Ventures/i, /Four Live/i, /Eight Category/i, /heritage-vault-kappa/, /imjustzain/i, /Koroma/i,
     /180\+ people/, /61 families/, /1,200\+/, /Supabase/, /Next\.js 16/, /\b4\b<\/div>\s*<div class="stat-lbl">Live/,
+    // Unsourced figures added in the 2026-09-16 relaunch; her earlier wording (106f8d2) has no such numbers (found 2026-10-30 skeptic review).
+    /40% reduction in maintenance/, /85% reduction in manual/, /licensing savings/i, /high-frequency trading/i, /vault fulfillment/i, /Michelle Sterling/,
   ];
   for (const p of ownPages) for (const re of banned) assert.doesNotMatch(read(p), re, `${p} matches ${re}`);
 });
