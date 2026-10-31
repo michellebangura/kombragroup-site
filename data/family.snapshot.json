@@ -43,7 +43,8 @@
       "Accessibility",
       "Cookies",
       "Contact"
-    ]
+    ],
+    "selfHostedFonts": "fonts/ in this kit: the three family faces as woff2 (SIL OFL 1.1, Latin subset) with fonts.css using relative URLs. A brand that sets fontsHref serves this folder itself and its legal pages make no third-party font request."
   },
   "collections": {
     "kombra-group": {
@@ -118,7 +119,8 @@
       ],
       "flags": {
         "parent": true
-      }
+      },
+      "fontsHref": "/assets/fonts/fonts.css"
     },
     "kombra-labs": {
       "name": "Kombra Labs",
@@ -243,7 +245,8 @@
         "children": true,
         "health": true,
         "updates": true
-      }
+      },
+      "fontsHref": "/fonts/fonts.css"
     },
     "bethehero": {
       "name": "Be The Hero",

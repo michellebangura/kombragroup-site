@@ -195,3 +195,11 @@ test('regression: no trailingSlash rewrite, so /dir/ links are served without a 
   // trailingSlash:false sent 308 for /ventures/x/ before the password gate ran (found 2026-10-30).
   assert.equal(JSON.parse(read('vercel.json')).trailingSlash, undefined);
 });
+
+test('no page, legal pages included, requests Google Fonts; the CSP allows fonts from self only', () => {
+  // Family branch moved legal/* to self-hosted fonts (2026-10-30), so the CSP no longer needs Google hosts.
+  for (const p of pages) assert.doesNotMatch(read(p), /fonts\.googleapis|fonts\.gstatic/, p);
+  const csp = JSON.parse(read('vercel.json')).headers[0].headers.find((h) => h.key === 'Content-Security-Policy').value;
+  assert.doesNotMatch(csp, /googleapis|gstatic/);
+  assert.match(csp, /font-src 'self';/);
+});
