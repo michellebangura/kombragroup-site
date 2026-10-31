@@ -54,3 +54,10 @@ Every main route was checked with curl against the deployed preview on 2026-10-3
 - Another agent works on branch `investors-partners-1030` in `/Users/mb/kombragroup-site`. That branch has the investors and partners hub and narrower middleware and vercel.json. When it merges with this branch, keep this branch's `middleware.js`. It gates every path and already gates `/investors-partners` with SITE_PASSWORD, as the tests show. Merge their vercel.json header blocks too; this branch already includes them.
 - A production deploy happened about an hour before this check, and it was not made from this branch. kombragroup.com currently returns a public 200 from that deploy. This branch has not been promoted to production. Promoting it would put the whole site behind the password.
 - The hub files in `/Users/mb/kombragroup-site/hub/` (untracked) and the investors-partners pages were not edited.
+
+## Skeptic review addendum (2026-10-30)
+
+- Re-ran `npm test` (19 of 19 pass), the gate check and a byte-for-byte compare of every served file against the branch. Only Vercel's preview feedback script differs. All claims held.
+- Found unsourced figures on the homepage, added by the 2026-09-16 relaunch and not in her earlier copy (106f8d2): "40% reduction in maintenance cycle time", "85% reduction in manual verification", "Multi-million dollar licensing savings", "high-frequency trading portals", "automated physical vault fulfillment", and "Michelle Sterling Bangura". Replaced them with her earlier wording and added the strings to the false-claims test (commit 1b10997).
+- New gated preview: https://kombragroup-site-z8x5nu2w7-michelle-banguras-projects.vercel.app (gate check ALL PASS).
+- Still for her: the homepage keeps the other figures and client names that were in her own April and August copy ($500M+, 100% shortlist rate, 69:1 ROI, $40M and 400,000+ residents, 50%/30%/35%/25% results, the client list, SAM.gov registration and the phone number). They come from her copy, but they need her confirmation before a public launch.
