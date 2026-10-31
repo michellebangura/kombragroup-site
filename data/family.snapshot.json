@@ -246,7 +246,8 @@
         "health": true,
         "updates": true
       },
-      "fontsHref": "/fonts/fonts.css"
+      "fontsHref": "/fonts/fonts.css",
+      "draftReviewer": "the founder"
     },
     "bethehero": {
       "name": "Be The Hero",
