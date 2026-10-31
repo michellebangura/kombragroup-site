@@ -634,12 +634,12 @@ footer{
 .kf-mark{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:18px;letter-spacing:.01em;color:var(--kf-fg);text-decoration:none}
 .kf-mark span{color:var(--kf-accent)}
 .kf-line{font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--kf-muted)}
-.kf-links{display:flex;flex-wrap:wrap;gap:4px 16px;margin-left:auto}
+.kf-bar .kf-links{position:static;inset:auto;z-index:auto;height:auto;width:auto;background:none;backdrop-filter:none;border:0;box-shadow:none;padding:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:4px 16px;margin-left:auto}
 .kf-links a{color:var(--kf-muted);text-decoration:underline;text-underline-offset:3px;padding:6px 0;min-height:24px}
 .kf-links a:hover{color:var(--kf-fg)}
 .kf-bar a:focus-visible{outline:3px solid var(--kf-accent);outline-offset:2px}
 .kf-copy{color:var(--kf-muted);font-size:12px}
-@media (max-width:380px){.kf-inner{padding:16px}.kf-links{margin-left:0}}
+@media (max-width:380px){.kf-inner{padding:16px}.kf-bar .kf-links{margin-left:0}}
 </style>
 </head>
 <body>
