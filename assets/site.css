@@ -1,0 +1,71 @@
+/* Kombra Group subpages (ventures, contact). Tokens: Kombra Group house collection,
+   /Users/mb/kombra-family-1030/family.json core + collections.kombra-group (2026-10-30). */
+:root{
+  --ink:#0B1322;--navy:#142238;--paper:#FBF9F5;--cream:#F4EFE6;--charcoal:#22252A;--muted:#5B6168;
+  --copper:#C67D3A;--copper-text:#8A4B17;--rule:rgba(34,37,42,.12);
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --max:1180px;--gutter:24px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--charcoal);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--copper-text)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--copper);outline-offset:2px}
+.skip{position:absolute;left:12px;top:-48px;background:var(--ink);color:#fff;padding:8px 12px;z-index:10}
+.skip:focus{top:12px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.top{background:var(--ink);border-bottom:1px solid rgba(212,175,55,.18)}
+.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;min-height:64px}
+.mark{font-family:var(--font-display);font-weight:700;font-size:25px;color:#fff;text-decoration:none;letter-spacing:.01em}
+.mark span{color:var(--copper)}
+.top nav{display:flex;flex-wrap:wrap;gap:4px 20px}
+.top nav a{color:rgba(251,249,245,.78);text-decoration:none;font-size:14px;font-weight:600;padding:10px 0;min-height:44px;display:inline-flex;align-items:center}
+.top nav a:hover,.top nav a[aria-current="page"]{color:var(--copper)}
+.hero{background:var(--ink);color:var(--paper);padding:64px 0 56px}
+.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#E09B59;margin:0 0 12px}
+.hero h1{font-family:var(--font-display);font-weight:600;font-size:clamp(39px,6vw,49px);line-height:1.1;margin:0 0 16px}
+.hero p{max-width:62ch;margin:0;color:rgba(251,249,245,.78);font-size:20px;line-height:1.5}
+main section{padding:56px 0}
+h2{font-family:var(--font-display);font-weight:600;font-size:31px;line-height:1.2;margin:0 0 8px;color:var(--ink)}
+h3{font-family:var(--font-display);font-weight:600;font-size:25px;line-height:1.2;margin:0 0 6px;color:var(--ink)}
+.lead{max-width:68ch;color:var(--muted);margin:0 0 32px}
+.tree{border-left:3px solid var(--copper);padding:4px 0 4px 20px;margin:0 0 40px;font-size:16px}
+.tree ol{list-style:none;margin:8px 0 0;padding:0 0 0 20px;border-left:1px solid var(--rule)}
+.tree li{margin:6px 0}
+.tree .lvl{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:8px}
+.collection{border-top:4px solid var(--accent);background:#fff;border-radius:3px;box-shadow:0 2px 8px rgba(0,0,0,.06);padding:32px;margin:0 0 32px}
+.collection header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin:0 0 8px}
+.collection .aud{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-text)}
+.brands{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:24px 0 0;padding:0;list-style:none}
+.brand{border:1px solid var(--rule);border-radius:3px;padding:20px;display:flex;flex-direction:column;gap:8px;background:var(--paper)}
+.brand p{margin:0}
+.brand .dom{font-family:var(--font-mono);font-size:13px;color:var(--muted)}
+.status{align-self:flex-start;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:1px;border:1px solid currentColor}
+.status-open{color:#1F5A4F;background:#E7F2EF}
+.status-preview{color:#7A5D12;background:#FBF3DC}
+.status-soft-launch{color:#7A5D12;background:#FBF3DC}
+.status-development{color:#4A5058;background:#EEF0F2}
+.brand a.go{margin-top:auto;font-weight:600;min-height:44px;display:inline-flex;align-items:center}
+.note{font-size:14px;color:var(--muted);max-width:68ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--rule);border-radius:3px;padding:24px}
+.card .label{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin:0 0 4px}
+.card a,.card span.v{font-size:18px}
+.back{display:inline-flex;min-height:44px;align-items:center;font-weight:600}
+.site-foot{background:var(--navy);color:rgba(251,249,245,.72);padding:24px 0;font-size:14px}
+.site-foot a{color:#E09B59}
+/* Kombra Group family bar (markup and rules from /Users/mb/kombra-family-1030) */
+.kf-bar{background:var(--kf-bg);color:var(--kf-fg);border-top:1px solid var(--kf-rule);font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px;line-height:1.5}
+.kf-inner{max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px}
+.kf-mark{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:18px;letter-spacing:.01em;color:var(--kf-fg);text-decoration:none}
+.kf-mark span{color:var(--kf-accent)}
+.kf-line{font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--kf-muted)}
+.kf-links{display:flex;flex-wrap:wrap;gap:4px 16px;margin-left:auto}
+.kf-links a{color:var(--kf-muted);text-decoration:underline;text-underline-offset:3px;padding:6px 0;min-height:24px}
+.kf-links a:hover{color:var(--kf-fg)}
+.kf-bar a:focus-visible{outline:3px solid var(--kf-accent);outline-offset:2px}
+@media (max-width:380px){:root{--gutter:16px}.kf-inner{padding:16px}.kf-links{margin-left:0}.collection{padding:20px}.hero p{font-size:18px}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

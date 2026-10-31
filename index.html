@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kombra Group | Systems That Work. Ventures That Last.</title>
-<meta name="description" content="Kombra Group is an AI-powered venture studio and enterprise systems consulting practice. Parent company of Purpose Built Compliance, Heritage Vault, Purpose Built Press, and Name It First.">
+<meta name="description" content="Kombra Group is an AI-powered venture studio and enterprise systems consulting practice. Parent of the Kombra Group house, the Purpose Built collection and the KombraCare collection.">
 <meta property="og:title" content="Kombra Group — Systems That Work. Ventures That Last.">
-<meta property="og:description" content="Venture studio &amp; enterprise systems architecture. Parent operating company of Purpose Built Compliance, Heritage Vault, Purpose Built Press, and Name It First.">
+<meta property="og:description" content="Venture studio &amp; enterprise systems architecture. Parent of the Kombra Group house, the Purpose Built collection and the KombraCare collection.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kombragroup.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://kombragroup.com/">
+<link rel="preload" href="/assets/fonts/DMSans-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -31,9 +32,9 @@
   --text-muted:#8F95A0;
   --teal:#2D6A5E;
   --teal-light:#3FA894;
-  --font-display:'DM Serif Display',Georgia,serif;
-  --font-body:'Instrument Sans',-apple-system,BlinkMacSystemFont,sans-serif;
-  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
   --shadow-sm:0 2px 8px rgba(0,0,0,0.06);
   --shadow-md:0 12px 32px rgba(11,19,34,0.08);
   --shadow-lg:0 20px 48px rgba(11,19,34,0.14);
@@ -42,7 +43,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--font-body);color:var(--charcoal);background:var(--warm-white);line-height:1.65;-webkit-font-smoothing:antialiased}
 
 /* NAVIGATION */
-nav{
+body>nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
   background:rgba(11,19,34,0.94);
   backdrop-filter:blur(16px);
@@ -113,8 +114,8 @@ nav{
 .menu-btn span{display:block;width:24px;height:2px;background:#ffffff;margin:6px 0;transition:.3s}
 
 /* LAYOUT & PAGES */
-.page{display:none}
-.page.active{display:block}
+.js .page{display:none}
+.js .page.active{display:block}
 section{padding:5.5rem 1.75rem}
 .container{max-width:1120px;margin:0 auto}
 
@@ -628,6 +629,17 @@ footer{
   section{padding:4rem 1.25rem}
   .hero-section{min-height:auto;padding-top:100px;padding-bottom:3.5rem}
 }
+/* Launch wave 2 (2026-10-30): skip link, focus, collection cards */
+.skip{position:absolute;left:12px;top:-48px;background:var(--navy-dark);color:#fff;padding:8px 12px;z-index:2000}
+.skip:focus{top:12px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--copper);outline-offset:2px}
+ul.venture-meta{list-style:none}
+ul.venture-meta li{margin-bottom:4px}
+.venture-coll{font-family:var(--font-mono);font-size:0.7rem;color:var(--warm-gray);font-weight:600;text-transform:uppercase;letter-spacing:1px}
+@media(max-width:900px){
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--navy-dark);padding:2rem;gap:1.25rem;box-shadow:0 12px 32px rgba(0,0,0,0.5);border-bottom:1px solid rgba(212,175,55,0.2)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 /* Kombra Group family bar */
 .kf-bar{background:var(--kf-bg);color:var(--kf-fg);border-top:1px solid var(--kf-rule);font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px;line-height:1.5}
 .kf-inner{max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px}
@@ -643,28 +655,30 @@ footer{
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <!-- NAVIGATION -->
-<nav>
-  <a href="javascript:void(0)" class="nav-mark" onclick="event.preventDefault();showPage('home')">
+<nav aria-label="Main">
+  <a href="#home" class="nav-mark" data-page="home">
     kombra<span>group</span>
     <span class="tag">Venture Studio</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('home')" class="active" id="nav-home">Home</a></li>
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('ventures')" id="nav-ventures">Live Ventures</a></li>
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('services')" id="nav-services">Advisory</a></li>
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('work')" id="nav-work">Track Record</a></li>
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('about')" id="nav-about">About</a></li>
-    <li><a href="javascript:void(0)" onclick="event.preventDefault();showPage('contact')" id="nav-contact">Contact</a></li>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home" data-page="home" class="active" id="nav-home">Home</a></li>
+    <li><a href="#ventures" data-page="ventures" id="nav-ventures">Ventures</a></li>
+    <li><a href="#services" data-page="services" id="nav-services">Advisory</a></li>
+    <li><a href="#work" data-page="work" id="nav-work">Track Record</a></li>
+    <li><a href="#about" data-page="about" id="nav-about">About</a></li>
+    <li><a href="#contact" data-page="contact" id="nav-contact">Contact</a></li>
   </ul>
-  <a href="javascript:void(0)" class="nav-cta" onclick="event.preventDefault();showPage('contact')">Connect &rarr;</a>
-  <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  <a href="#contact" class="nav-cta" data-page="contact">Connect &rarr;</a>
+  <button class="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- ========================================================================= -->
 <!-- 1. HOME PAGE -->
 <!-- ========================================================================= -->
+<main id="main">
 <div class="page active" id="page-home">
   <!-- HERO -->
   <section class="hero-section">
@@ -681,15 +695,17 @@ footer{
       </p>
 
       <div class="hero-cta-group">
-        <button class="btn-primary" onclick="showPage('ventures')">Explore Live Ventures &rarr;</button>
-        <button class="btn-outline" onclick="showPage('services')">Enterprise Advisory &rarr;</button>
+        <a class="btn-primary" href="/ventures/">Explore the ventures &rarr;</a>
+        <a class="btn-outline" href="#services" data-page="services">Enterprise Advisory &rarr;</a>
       </div>
 
       <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-val">4</div>
-          <div class="stat-lbl">Live Commercial Ventures In-Market</div>
+        <!-- gen:hero-stat:start -->
+<div class="stat-item">
+          <div class="stat-val">9</div>
+          <div class="stat-lbl">Brands in 4 Collections</div>
         </div>
+<!-- gen:hero-stat:end -->
         <div class="stat-item">
           <div class="stat-val">$500M+</div>
           <div class="stat-lbl">Capital Programs Delivered &amp; Modernized</div>
@@ -706,128 +722,103 @@ footer{
     </div>
   </section>
 
-  <!-- LIVE VENTURES SHOWCASE -->
+  <!-- VENTURE COLLECTIONS (generated from data/ventures.json) -->
   <section style="background:var(--cream);padding:6rem 1.75rem">
     <div class="container">
-      <div class="section-label">Commercial Portfolio</div>
-      <h2 class="section-title">The Four Live Ventures of Kombra Group</h2>
+      <div class="section-label">The Kombra Group family</div>
+      <h2 class="section-title">One parent. A family of collections.</h2>
       <p class="section-intro">
-        Every consulting engagement reveals systemic operational failures across industries. Rather than solving them once, we build dedicated commercial ventures that solve them permanently at national scale.
+        Every consulting engagement reveals operational failures that recur across industries. Rather than solve them once, we build ventures that solve them for good. Each venture belongs to one collection; each collection shares a look and a set of privacy rules with the parent.
       </p>
 
-      <div class="venture-grid">
-        <!-- VENTURE 1: PURPOSE BUILT COMPLIANCE -->
-        <div class="venture-card">
+      <!-- gen:home-collections:start -->
+<div class="venture-grid">
+        <div class="venture-card" style="border-top:4px solid #C67D3A">
           <div>
-            <div class="venture-header">
-              <span class="venture-badge lms">Live Venture &bull; Accredited LMS</span>
-              <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--gold-dim);font-weight:600">CE &bull; REGULATORY</span>
-            </div>
-            <h3>Purpose Built Compliance</h3>
-            <p class="subtitle">purposebuiltcompliance.com</p>
-            <p class="desc">
-              State-mandated continuing education and court-ordered compliance LMS. Delivers accredited online courses with timed seat-time enforcement, interactive branching scenarios, formative mastery checks, and 24/7 verifiable cryptographic certificates.
-            </p>
-            <div class="venture-meta">
-              <div><strong>Statutory Mandates:</strong> CA FEHA (SB 1343), TX Family Code § 105.009, FL CAM, NY, IL, PE Ethics, FTC Safeguards</div>
-              <div><strong>Audited Exit:</strong> Instant SHA-256 Verified Certificates &bull; Public Registry</div>
-            </div>
+            <div class="venture-header"><span class="venture-badge">Collection</span></div>
+            <h3>Kombra Labs collection</h3>
+            <p class="subtitle">Early ideas and ventures in preview; partners and testers</p>
+            <p class="desc">The parent's studio: early ideas and ventures in preview. A venture moves to its own collection when it graduates.</p>
+            <ul class="venture-meta">
+              <li><strong>Kombra Labs</strong> &bull; In development</li>
+              <li><strong>VibeBuilt</strong> &bull; In development</li>
+            </ul>
           </div>
-          <a href="https://purposebuiltcompliance.com" target="_blank" rel="noopener noreferrer" class="venture-link">
-            Visit Purpose Built Compliance &rarr;
-          </a>
+          <a href="/ventures/kombra-labs/" class="venture-link">Kombra Labs collection &rarr;</a>
         </div>
-
-        <!-- VENTURE 2: HERITAGE VAULT -->
-        <div class="venture-card">
+        <div class="venture-card" style="border-top:4px solid #C9A84C">
           <div>
-            <div class="venture-header">
-              <span class="venture-badge live">Live Venture &bull; Archival Platform</span>
-              <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--teal);font-weight:600">ORAL HISTORY</span>
-            </div>
-            <h3>Heritage Vault</h3>
-            <p class="subtitle">heritagevault.io / purposebuiltlearning</p>
-            <p class="desc">
-              Culturally-specific family storytelling and generational continuity archive. Preserves diaspora memory, indigenous narratives, and multilingual family trees through structured audio recording, fictive kin mapping, and guided oral history inquiry.
-            </p>
-            <div class="venture-meta">
-              <div><strong>Scope:</strong> Multi-generational family tree mapping (180+ people, 61 families)</div>
-              <div><strong>Curriculum:</strong> 26 bilingual cultural identity &amp; oral history titles</div>
-            </div>
+            <div class="venture-header"><span class="venture-badge">Collection</span></div>
+            <h3>Purpose Built collection</h3>
+            <p class="subtitle">Adult readers, practitioners, organisations</p>
+            <p class="desc">Books, tools and courses that turn what a reader learns into a decision they act on.</p>
+            <ul class="venture-meta">
+              <li><strong>Purpose Built Press</strong> &bull; Private preview</li>
+              <li><strong>Name It First</strong> &bull; Private preview</li>
+              <li><strong>Purpose Built Compliance</strong> &bull; Open</li>
+              <li><strong>Heritage Vault</strong> &bull; In development</li>
+              <li><strong>Be Better at Life</strong> &bull; Soft launch</li>
+              <li><strong>Be The Hero</strong> &bull; Open</li>
+            </ul>
           </div>
-          <a href="https://heritage-vault-kappa.vercel.app" target="_blank" rel="noopener noreferrer" class="venture-link">
-            Explore Heritage Vault &rarr;
-          </a>
+          <a href="/ventures/purpose-built/" class="venture-link">Purpose Built collection &rarr;</a>
         </div>
-
-        <!-- VENTURE 3: PURPOSE BUILT PRESS -->
-        <div class="venture-card">
+        <div class="venture-card" style="border-top:4px solid #2D6A5E">
           <div>
-            <div class="venture-header">
-              <span class="venture-badge live">Live Venture &bull; Publishing House</span>
-              <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--copper);font-weight:600">1,200+ TITLES</span>
-            </div>
-            <h3>Purpose Built Press</h3>
-            <p class="subtitle">purposebuiltpress.com</p>
-            <p class="desc">
-              Clinical research-backed self-knowledge tools &mdash; guided workbooks, reflection journals, and structured conversation frameworks. Designed to produce tangible, signed behavioral agreements across relationships, neurodivergence, family stabilization, and career transitions.
-            </p>
-            <div class="venture-meta">
-              <div><strong>Catalog:</strong> 1,200+ structured non-fiction titles &bull; Modular derivation pipeline</div>
-              <div><strong>Enterprise:</strong> Workforce transition licensing ($13&ndash;$25/seat)</div>
-            </div>
+            <div class="venture-header"><span class="venture-badge">Collection</span></div>
+            <h3>KombraCare collection</h3>
+            <p class="subtitle">Parents and families; children use some products with a parent</p>
+            <p class="desc">Tools for parents and families. Where a child uses a product, a parent is there.</p>
+            <ul class="venture-meta">
+              <li><strong>KombraCare (hew.app)</strong> &bull; In development</li>
+            </ul>
           </div>
-          <a href="https://www.purposebuiltpress.com" target="_blank" rel="noopener noreferrer" class="venture-link">
-            Visit Purpose Built Press &rarr;
-          </a>
+          <a href="/ventures/kombracare/" class="venture-link">KombraCare collection &rarr;</a>
         </div>
-
-        <!-- VENTURE 4: NAME IT FIRST -->
-        <div class="venture-card">
+        <div class="venture-card" style="border-top:4px solid #6E737B">
           <div>
-            <div class="venture-header">
-              <span class="venture-badge live">Live Venture &bull; Consumer Engine</span>
-              <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--teal);font-weight:600">DISCOVERY &bull; INQUIRY</span>
-            </div>
-            <h3>Name It First</h3>
-            <p class="subtitle">nameitfirst.com</p>
-            <p class="desc">
-              <em>"If you can name it, you can create it."</em> Direct-to-consumer assessment and situational dilemma discovery engine. Matches individuals at complex personal, parenting, or leadership crossroads to the exact structured workbook and cognitive framework they need right now.
-            </p>
-            <div class="venture-meta">
-              <div><strong>Mechanism:</strong> Multi-dimensional diagnostic matching &bull; Situational indexing</div>
-              <div><strong>Consumer Reach:</strong> Conversational inquiry front door for the Kombra library</div>
-            </div>
+            <div class="venture-header"><span class="venture-badge">Collection</span></div>
+            <h3>Kekoro collection</h3>
+            <p class="subtitle">Young adults and families (Black Power House, Black Summer Camp, Return and Build)</p>
+            <p class="desc">Programs for young adults and families. Its brands and design are still being set.</p>
+            <ul class="venture-meta">
+              <li>In development</li>
+            </ul>
           </div>
-          <a href="https://nameitfirst.com" target="_blank" rel="noopener noreferrer" class="venture-link">
-            Visit Name It First &rarr;
-          </a>
+          <a href="/ventures/kekoro/" class="venture-link">Kekoro collection &rarr;</a>
         </div>
       </div>
+<!-- gen:home-collections:end -->
 
       <!-- VENTURE STUDIO THESIS CALLOUT -->
       <div class="thesis-box">
-        <h3>The Kombra Venture Studio Flywheel</h3>
+        <h3>How the family works</h3>
         <p class="thesis-lead">
-          We operate on a unified architecture where our enterprise consulting engagements, clinical research, and autonomous publishing pipelines compound on the exact same infrastructure.
+          Consulting work, our own operations and every venture run on the same discipline: diagnosis first, structure before action, explicit over implicit.
         </p>
         <div class="thesis-pillars">
+          <!-- gen:family-pillars:start -->
           <div class="thesis-pillar">
-            <h4>1. Clinical &amp; Intellectual IP</h4>
-            <p><strong>Purpose Built Press</strong> builds deep diagnostic frameworks and 1,200+ structured workbooks.</p>
+            <h4>1. Kombra Labs collection</h4>
+            <p>The parent's studio: early ideas and ventures in preview. A venture moves to its own collection when it graduates.</p>
           </div>
           <div class="thesis-pillar">
-            <h4>2. Consumer Discovery</h4>
-            <p><strong>Name It First</strong> creates the direct conversational front door matching individuals to solutions.</p>
+            <h4>2. Purpose Built collection</h4>
+            <p>Books, tools and courses that turn what a reader learns into a decision they act on.</p>
           </div>
           <div class="thesis-pillar">
-            <h4>3. Statutory CE &amp; Court LMS</h4>
-            <p><strong>Purpose Built Compliance</strong> monetizes mandatory continuing education and legal compliance at scale.</p>
+            <h4>3. KombraCare collection</h4>
+            <p>Tools for parents and families. Where a child uses a product, a parent is there.</p>
           </div>
           <div class="thesis-pillar">
-            <h4>4. Generational Continuity</h4>
-            <p><strong>Heritage Vault</strong> anchors cultural wisdom, family narrative archives, and multilingual lineage.</p>
+            <h4>4. Kekoro collection</h4>
+            <p>Programs for young adults and families. Its brands and design are still being set.</p>
           </div>
+          <div class="thesis-pillar">
+            <h4>5. One standard</h4>
+            <p>One design core and one set of privacy rules across every Kombra Group brand, led by Kombra Group (parent house).</p>
+          </div>
+<!-- gen:family-pillars:end -->
         </div>
       </div>
     </div>
@@ -878,8 +869,8 @@ footer{
             <p>One-off advisory insights are formalized into modular, configurable products sold nationally.</p>
           </div>
           <div class="thesis-pillar">
-            <h4>Shared Data Lake</h4>
-            <p>Unified Supabase architecture powers content derivation, identity verification, and telemetry.</p>
+            <h4>Shared Family Standard</h4>
+            <p>Every venture follows the same design core and the same privacy rules as the parent.</p>
           </div>
           <div class="thesis-pillar">
             <h4>Self-First Validation</h4>
@@ -892,96 +883,93 @@ footer{
         </div>
       </div>
 
-      <!-- DETAILED VENTURES LIST -->
-      <div style="display:flex;flex-direction:column;gap:2.5rem">
-        <!-- 1. PBC -->
-        <div class="venture-card" style="padding:3rem">
-          <div class="venture-header">
-            <div>
-              <span class="venture-badge lms">Live Venture &bull; Accredited LMS</span>
-              <h3 style="font-size:2rem;margin-top:0.75rem;margin-bottom:0.25rem">Purpose Built Compliance</h3>
-              <p class="subtitle" style="font-size:0.9rem">purposebuiltcompliance.com &bull; Next.js 16 / Supabase / Vercel</p>
-            </div>
-            <a href="https://purposebuiltcompliance.com" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:0.75rem;padding:0.6rem 1.4rem">
-              Launch Site &rarr;
-            </a>
+      <!-- EVERY BRAND (generated from data/ventures.json) -->
+      <!-- gen:ventures-list:start -->
+<div class="venture-grid">
+        <div class="venture-card" data-brand="kombra-labs" data-status="development">
+          <div>
+            <div class="venture-header"><span class="venture-badge">In development</span><span class="venture-coll">Kombra Labs</span></div>
+            <h3>Kombra Labs</h3>
+            
+            <p class="desc">Kombra Group's ideas lab, where you can follow an idea while it is built.</p>
           </div>
-          <p class="desc" style="font-size:1.05rem;max-width:80ch">
-            Purpose Built Compliance is an accredited regulatory education and continuing education (CE) platform. It provides mandatory training courses recognized by courts and state licensing boards across California, Texas, Florida, New York, and federal agencies.
-          </p>
-          <div class="venture-meta" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem">
-            <div><strong>Active Regimes:</strong> California FEHA, Texas Family Code § 105.009, Florida CAM, FTC Safeguards</div>
-            <div><strong>Pedagogical Engine:</strong> 4D Bystander Model, BIFF Co-Parenting, Fiduciary Ethics</div>
-            <div><strong>Verification:</strong> Instant SHA-256 cryptographically verifiable PDF certificates</div>
-          </div>
+          <a href="/ventures/kombra-labs/" class="venture-link">Kombra Labs collection &rarr;</a>
         </div>
-
-        <!-- 2. HERITAGE -->
-        <div class="venture-card" style="padding:3rem">
-          <div class="venture-header">
-            <div>
-              <span class="venture-badge live">Live Venture &bull; Archival Platform</span>
-              <h3 style="font-size:2rem;margin-top:0.75rem;margin-bottom:0.25rem">Heritage Vault</h3>
-              <p class="subtitle" style="font-size:0.9rem">heritagevault.io &bull; Purpose Built Learning</p>
-            </div>
-            <a href="https://heritage-vault-kappa.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:0.75rem;padding:0.6rem 1.4rem">
-              Launch Site &rarr;
-            </a>
+        <div class="venture-card" data-brand="vibebuilt" data-status="development">
+          <div>
+            <div class="venture-header"><span class="venture-badge">In development</span><span class="venture-coll">Kombra Labs</span></div>
+            <h3>VibeBuilt</h3>
+            
+            <p class="desc">A field app. Photos and job progress stay on the device that took them.</p>
           </div>
-          <p class="desc" style="font-size:1.05rem;max-width:80ch">
-            Heritage Vault is a dedicated cultural storytelling, oral history, and family archival platform. It applies structured canonical question architecture to preserve generational wisdom, African diaspora narratives, and bilingual family heritage across continents.
-          </p>
-          <div class="venture-meta" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem">
-            <div><strong>Generational Map:</strong> Koroma-Bangura ancestral lineage (180+ people across 61 families)</div>
-            <div><strong>Media Archiving:</strong> Synchronized audio recordings, transcribed oral histories, fictive kin relations</div>
-            <div><strong>Youth Integration:</strong> Purpose Built Learning bilingual dilemma exploration for children</div>
-          </div>
+          <a href="/ventures/kombra-labs/" class="venture-link">Kombra Labs collection &rarr;</a>
         </div>
-
-        <!-- 3. PRESS -->
-        <div class="venture-card" style="padding:3rem">
-          <div class="venture-header">
-            <div>
-              <span class="venture-badge live">Live Venture &bull; Publishing House</span>
-              <h3 style="font-size:2rem;margin-top:0.75rem;margin-bottom:0.25rem">Purpose Built Press</h3>
-              <p class="subtitle" style="font-size:0.9rem">purposebuiltpress.com &bull; Autonomous Publishing Pipeline</p>
-            </div>
-            <a href="https://www.purposebuiltpress.com" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:0.75rem;padding:0.6rem 1.4rem">
-              Launch Site &rarr;
-            </a>
+        <div class="venture-card" data-brand="pbp" data-status="preview">
+          <div>
+            <div class="venture-header"><span class="venture-badge">Private preview</span><span class="venture-coll">Purpose Built</span></div>
+            <h3>Purpose Built Press</h3>
+            <p class="subtitle">purposebuiltpress.com</p>
+            <p class="desc">Structured self-knowledge tools built on published research. Every one produces a document you sign and act on.</p>
           </div>
-          <p class="desc" style="font-size:1.05rem;max-width:80ch">
-            Purpose Built Press publishes structured self-knowledge tools, clinical reflection workbooks, and workforce enablement field guides. Every title is engineered not for passive reading, but to produce an actionable, signed personal deliverable.
-          </p>
-          <div class="venture-meta" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem">
-            <div><strong>Catalog Volume:</strong> 1,200+ specialized non-fiction titles across 40+ human situations</div>
-            <div><strong>Enterprise Solutions:</strong> Workforce AI transition workbooks ($13&ndash;$25 per employee)</div>
-            <div><strong>Pipeline Automation:</strong> Markdown &bull; InDesign &bull; Print-on-demand &bull; Digital ePub</div>
-          </div>
+          <a href="/ventures/purpose-built/" class="venture-link">Purpose Built collection &rarr;</a>
         </div>
-
-        <!-- 4. NAME IT FIRST -->
-        <div class="venture-card" style="padding:3rem">
-          <div class="venture-header">
-            <div>
-              <span class="venture-badge live">Live Venture &bull; Consumer Engine</span>
-              <h3 style="font-size:2rem;margin-top:0.75rem;margin-bottom:0.25rem">Name It First</h3>
-              <p class="subtitle" style="font-size:0.9rem">nameitfirst.com &bull; Conversational Discovery Engine</p>
-            </div>
-            <a href="https://nameitfirst.com" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:0.75rem;padding:0.6rem 1.4rem">
-              Launch Site &rarr;
-            </a>
+        <div class="venture-card" data-brand="nif" data-status="preview">
+          <div>
+            <div class="venture-header"><span class="venture-badge">Private preview</span><span class="venture-coll">Purpose Built</span></div>
+            <h3>Name It First</h3>
+            <p class="subtitle">nameitfirst.com</p>
+            <p class="desc">Workbooks, journals and guides built on published research. Every product produces a signed document.</p>
           </div>
-          <p class="desc" style="font-size:1.05rem;max-width:80ch">
-            Name It First serves as the interactive consumer front door to the entire Kombra intellectual property library. Through empathetic conversational inquiry, it helps users precisely articulate their dilemma and matches them with exact developmental exercises.
-          </p>
-          <div class="venture-meta" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem">
-            <div><strong>Core Mechanism:</strong> Multi-tiered situational assessment and diagnostic taxonomy</div>
-            <div><strong>Integration:</strong> Seamless fulfillment via Purpose Built Press and digital workspaces</div>
-            <div><strong>Audience:</strong> Individuals navigating career inflection, grief, co-parenting, and leadership</div>
+          <a href="/ventures/purpose-built/" class="venture-link">Purpose Built collection &rarr;</a>
+        </div>
+        <div class="venture-card" data-brand="pbc" data-status="open">
+          <div>
+            <div class="venture-header"><span class="venture-badge">Open</span><span class="venture-coll">Purpose Built</span></div>
+            <h3>Purpose Built Compliance</h3>
+            <p class="subtitle">purposebuiltcompliance.com</p>
+            <p class="desc">Accredited continuing professional education, state licensing courseware and court-mandated programs.</p>
           </div>
+          <a href="https://purposebuiltcompliance.com" rel="noopener noreferrer" class="venture-link">Visit Purpose Built Compliance &rarr;</a>
+        </div>
+        <div class="venture-card" data-brand="heritage" data-status="development">
+          <div>
+            <div class="venture-header"><span class="venture-badge">In development</span><span class="venture-coll">Purpose Built</span></div>
+            <h3>Heritage Vault</h3>
+            
+            <p class="desc">Record your voice. Preserve your stories. Give your family the gift of memory.</p>
+          </div>
+          <a href="/ventures/purpose-built/" class="venture-link">Purpose Built collection &rarr;</a>
+        </div>
+        <div class="venture-card" data-brand="bebetteratlife" data-status="soft-launch">
+          <div>
+            <div class="venture-header"><span class="venture-badge">Soft launch</span><span class="venture-coll">Purpose Built</span></div>
+            <h3>Be Better at Life</h3>
+            
+            <p class="desc">Michelle Bangura builds in public: the friction she meets as a parent, founder and friend, the tool she builds for it, and what changed after.</p>
+          </div>
+          <a href="/ventures/purpose-built/" class="venture-link">Purpose Built collection &rarr;</a>
+        </div>
+        <div class="venture-card" data-brand="bethehero" data-status="open">
+          <div>
+            <div class="venture-header"><span class="venture-badge">Open</span><span class="venture-coll">Purpose Built</span></div>
+            <h3>Be The Hero</h3>
+            <p class="subtitle">bethehero.app</p>
+            <p class="desc">Interactive stories that build empathy and decision-making skills for kids.</p>
+          </div>
+          <a href="https://bethehero.app" rel="noopener noreferrer" class="venture-link">Visit Be The Hero &rarr;</a>
+        </div>
+        <div class="venture-card" data-brand="hew" data-status="development">
+          <div>
+            <div class="venture-header"><span class="venture-badge">In development</span><span class="venture-coll">KombraCare</span></div>
+            <h3>KombraCare (hew.app)</h3>
+            
+            <p class="desc">A family organiser for parents: learning activities, events and playdates.</p>
+          </div>
+          <a href="/ventures/kombracare/" class="venture-link">KombraCare collection &rarr;</a>
         </div>
       </div>
+<!-- gen:ventures-list:end -->
+      <p style="margin-top:2rem"><a class="btn-primary" href="/ventures/">See the family by collection &rarr;</a></p>
     </div>
   </section>
 </div>
@@ -1161,9 +1149,11 @@ footer{
           <div class="about-quote">
             "The Profit of Progress: Profitability is not the compromise of social impact &mdash; it is the engine that guarantees it lasts."
           </div>
-          <p>
-            Today, that same rigor powers our four active ventures: <strong>Purpose Built Compliance</strong> (accredited regulatory CE &amp; court LMS), <strong>Heritage Vault</strong> (diaspora oral history archive), <strong>Purpose Built Press</strong> (1,200+ clinical workbooks), and <strong>Name It First</strong> (consumer discovery &amp; inquiry).
+          <!-- gen:about-ventures:start -->
+<p>
+            Today Kombra Group is the parent of 9 brands in 4 collections: Kombra Labs collection, Purpose Built collection, KombraCare collection and Kekoro collection. <a href="/ventures/">See every brand and its current status</a>.
           </p>
+<!-- gen:about-ventures:end -->
           <p>
             <strong>AI-Native Operations:</strong> We do not treat AI as a futuristic experiment. LLMs, generative pipelines, and autonomous agent loops are daily production tools in our derivation pipelines, compliance auditing, and software delivery.
           </p>
@@ -1255,6 +1245,8 @@ footer{
   </section>
 </div>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
@@ -1264,32 +1256,35 @@ footer{
     </div>
 
     <div class="footer-col">
-      <h5>Live Ventures</h5>
+      <!-- gen:footer-ventures:start -->
+<h5>Collections</h5>
       <ul>
-        <li><a href="https://purposebuiltcompliance.com" target="_blank" rel="noopener noreferrer">Purpose Built Compliance</a></li>
-        <li><a href="https://heritage-vault-kappa.vercel.app" target="_blank" rel="noopener noreferrer">Heritage Vault</a></li>
-        <li><a href="https://www.purposebuiltpress.com" target="_blank" rel="noopener noreferrer">Purpose Built Press</a></li>
-        <li><a href="https://nameitfirst.com" target="_blank" rel="noopener noreferrer">Name It First</a></li>
+        <li><a href="/ventures/kombra-labs/">Kombra Labs collection</a></li>
+        <li><a href="/ventures/purpose-built/">Purpose Built collection</a></li>
+        <li><a href="/ventures/kombracare/">KombraCare collection</a></li>
+        <li><a href="/ventures/kekoro/">Kekoro collection</a></li>
+        <li><a href="/ventures/">All ventures</a></li>
       </ul>
+<!-- gen:footer-ventures:end -->
     </div>
 
     <div class="footer-col">
       <h5>Studio &amp; Advisory</h5>
       <ul>
-        <li><a href="javascript:void(0)" onclick="showPage('services')">AI Sales Diagnostic</a></li>
-        <li><a href="javascript:void(0)" onclick="showPage('services')">Fractional COO / CTO</a></li>
-        <li><a href="javascript:void(0)" onclick="showPage('work')">Public Sector Modernization</a></li>
-        <li><a href="javascript:void(0)" onclick="showPage('work')">GovTech Capture</a></li>
+        <li><a href="#services" data-page="services">AI Sales Diagnostic</a></li>
+        <li><a href="#services" data-page="services">Fractional COO / CTO</a></li>
+        <li><a href="#work" data-page="work">Public Sector Modernization</a></li>
+        <li><a href="#work" data-page="work">GovTech Capture</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
       <h5>Entity</h5>
       <ul>
-        <li><a href="javascript:void(0)" onclick="showPage('about')">About Kombra Group</a></li>
+        <li><a href="#about" data-page="about">About Kombra Group</a></li>
         <li><a href="https://michellebglobal.com" target="_blank" rel="noopener noreferrer">Michelle Bangura</a></li>
         <li><a href="https://linkedin.com/in/michellebangura" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
-        <li><a href="javascript:void(0)" onclick="showPage('contact')">Contact &amp; Inquiries</a></li>
+        <li><a href="#contact" data-page="contact">Contact &amp; Inquiries</a></li>
       </ul>
     </div>
   </div>
@@ -1305,60 +1300,12 @@ footer{
     <a class="kf-mark" href="/" aria-label="Kombra Group home">kombra<span>group</span></a>
     <span class="kf-line">The Kombra Group family of companies</span>
     <nav class="kf-links" aria-label="Legal">
-      <a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a><a href="/legal/accessibility.html">Accessibility</a><a href="/legal/cookies.html">Cookies</a><a href="mailto:hello@kombragroup.com">Contact</a>
+      <a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a><a href="/legal/accessibility.html">Accessibility</a><a href="/legal/cookies.html">Cookies</a><a href="/contact/">Contact</a>
     </nav>
   </div>
 </div>
 
 
-<script>
-function showPage(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  var target = document.getElementById('page-'+id);
-  if(target){
-    target.classList.add('active');
-  }
-  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
-  var n=document.getElementById('nav-'+id);
-  if(n) n.classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function toggleMenu(){
-  var l=document.querySelector('.nav-links');
-  var btn=document.querySelector('.menu-btn');
-  if(l.classList.contains('open')){
-    l.classList.remove('open');
-    l.style.display='none';
-    btn.classList.remove('open');
-  } else {
-    l.classList.add('open');
-    l.style.display='flex';
-    l.style.flexDirection='column';
-    l.style.position='absolute';
-    l.style.top='100%';
-    l.style.left='0';
-    l.style.right='0';
-    l.style.background='var(--navy-dark)';
-    l.style.padding='2rem';
-    l.style.gap='1.25rem';
-    l.style.boxShadow='0 12px 32px rgba(0,0,0,0.5)';
-    l.style.borderBottom='1px solid rgba(212,175,55,0.2)';
-    btn.classList.add('open');
-  }
-}
-
-document.querySelectorAll('.nav-links a').forEach(function(a){
-  a.addEventListener('click',function(){
-    if(window.innerWidth<900){
-      var l=document.querySelector('.nav-links');
-      var b=document.querySelector('.menu-btn');
-      l.classList.remove('open');
-      l.style.display='none';
-      b.classList.remove('open');
-    }
-  });
-});
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

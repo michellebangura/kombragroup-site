@@ -1,0 +1,110 @@
+{
+  "_about": "Kombra Group venture collection data. Collection names, audiences, accents and brand membership come from data/family.snapshot.json, a copy of /Users/mb/kombra-family-1030/family.json (run node scripts/build.mjs --sync to refresh it; tests fail when the copy drifts from the live file). This file adds only what family.json does not hold: the order collections are shown in, a one-line summary per collection, and each brand's status and description with its source. Status rules: 'open' only when the brand's own domain answered 200 with the brand's own page on the check date; 'preview' when the domain answered 401 (password gate); otherwise the family.json launch note ('pre-launch' -> 'development', 'soft launch' -> 'soft-launch'). Only 'open' brands get an outbound link. No figures, partners or claims beyond the recorded sources.",
+  "checked": "2026-10-30",
+  "statusLabels": {
+    "open": "Open",
+    "preview": "Private preview",
+    "soft-launch": "Soft launch",
+    "development": "In development"
+  },
+  "parent": {
+    "name": "Kombra Group",
+    "domain": "kombragroup.com",
+    "email": "hello@kombragroup.com",
+    "familyLine": "The Kombra Group family of companies"
+  },
+  "collectionOrder": [
+    "kombra-labs",
+    "purpose-built",
+    "kombracare",
+    "kekoro"
+  ],
+  "collections": {
+    "kombra-labs": {
+      "short": "Kombra Labs",
+      "summary": "The parent's studio: early ideas and ventures in preview. A venture moves to its own collection when it graduates.",
+      "source": "family.json collections.kombra-labs audience and note"
+    },
+    "purpose-built": {
+      "short": "Purpose Built",
+      "summary": "Books, tools and courses that turn what a reader learns into a decision they act on.",
+      "source": "PBP and NIF descriptions (every product produces a signed document)"
+    },
+    "kombracare": {
+      "short": "KombraCare",
+      "summary": "Tools for parents and families. Where a child uses a product, a parent is there.",
+      "source": "family.json collections.kombracare audience"
+    },
+    "kekoro": {
+      "short": "Kekoro",
+      "summary": "Programs for young adults and families. Its brands and design are still being set.",
+      "status": "development",
+      "source": "family.json collections.kekoro audience (no brands, accent or design source listed yet)"
+    }
+  },
+  "brands": {
+    "kombra-labs": {
+      "name": "Kombra Labs",
+      "status": "development",
+      "domain": null,
+      "description": "Kombra Group's ideas lab, where you can follow an idea while it is built.",
+      "source": "family.json brands.kombra-labs (domain 'pre-launch'; collects: the follow-an-idea form)"
+    },
+    "vibebuilt": {
+      "name": "VibeBuilt",
+      "status": "development",
+      "domain": null,
+      "description": "A field app. Photos and job progress stay on the device that took them.",
+      "source": "family.json brands.vibebuilt (domain 'VibeBuilt field app (pre-launch)'; collects)"
+    },
+    "pbp": {
+      "name": "Purpose Built Press",
+      "status": "preview",
+      "domain": "purposebuiltpress.com",
+      "description": "Structured self-knowledge tools built on published research. Every one produces a document you sign and act on.",
+      "source": "/Users/mb/Documents/purposebuiltpress app layout metadata description; www.purposebuiltpress.com answered 401 on 2026-10-30"
+    },
+    "nif": {
+      "name": "Name It First",
+      "status": "preview",
+      "domain": "nameitfirst.com",
+      "description": "Workbooks, journals and guides built on published research. Every product produces a signed document.",
+      "source": "/Users/mb/nameitfirst-build/app layout metadata description; nameitfirst.com answered 401 on 2026-10-30"
+    },
+    "pbc": {
+      "name": "Purpose Built Compliance",
+      "status": "open",
+      "domain": "purposebuiltcompliance.com",
+      "description": "Accredited continuing professional education, state licensing courseware and court-mandated programs.",
+      "source": "purposebuiltcompliance.com meta description, answered 200 on 2026-10-30"
+    },
+    "heritage": {
+      "name": "Heritage Vault",
+      "status": "development",
+      "domain": null,
+      "description": "Record your voice. Preserve your stories. Give your family the gift of memory.",
+      "source": "/Users/mb/Documents/heritage-vault layout metadata description; family.json domain 'Heritage Vault (pre-launch)'"
+    },
+    "bebetteratlife": {
+      "name": "Be Better at Life",
+      "status": "soft-launch",
+      "domain": null,
+      "description": "Michelle Bangura builds in public: the friction she meets as a parent, founder and friend, the tool she builds for it, and what changed after.",
+      "source": "/Users/mb/bebetteratlife-web layout metadata description; family.json domain 'Be Better at Life (soft launch)'"
+    },
+    "hew": {
+      "name": "KombraCare (hew.app)",
+      "status": "development",
+      "domain": null,
+      "description": "A family organiser for parents: learning activities, events and playdates.",
+      "source": "family.json brands.hew (domain 'hew.app (pre-launch)'; collects list)"
+    },
+    "bethehero": {
+      "name": "Be The Hero",
+      "status": "open",
+      "domain": "bethehero.app",
+      "description": "Interactive stories that build empathy and decision-making skills for kids.",
+      "source": "bethehero.app meta description, answered 200 on 2026-10-30"
+    }
+  }
+}

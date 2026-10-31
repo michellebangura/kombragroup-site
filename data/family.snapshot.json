@@ -1,0 +1,264 @@
+{
+  "_about": "Kombra Group family design core, 2026-10-30. One source for the family bar, collection accents and the brand list used by render.mjs. Sources: /Users/mb/kombra-sites/brand/*/tokens.json (Kombra Group, PBP, NIF rule books), live kombragroup.com :root, repo CSS. Decisions open for Michelle are listed in /Users/mb/KOMBRA_BRAND_FAMILY_1030.md section 7.",
+  "core": {
+    "fontStacks": {
+      "display": "'Cormorant Garamond', Georgia, serif",
+      "body": "'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "mono": "'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+    },
+    "typeScalePx": {
+      "caption": 12,
+      "small": 14,
+      "body": 16,
+      "lead": 20,
+      "h4": 20,
+      "h3": 25,
+      "h2": 31,
+      "h1": 39,
+      "display": 49
+    },
+    "typeScaleRule": "Major third (1.25) from a 16px body. Footer family bar: 12px mono label, 13px links. Legal pages: 16px body, 68ch measure, line-height 1.6.",
+    "spacingPx": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64,
+      96
+    ],
+    "gutterPx": {
+      "default": 24,
+      "narrow380": 16
+    },
+    "containerMaxPx": 1180,
+    "focus": "3px solid accent, 2px offset",
+    "familyLine": "A Kombra Group company",
+    "familyMark": "Text wordmark 'kombra' + 'group' in the accent colour, as used in the kombragroup.com footer since 2026-09. No new logo drawn: a logo is her decision.",
+    "legalLinks": [
+      "Privacy",
+      "Terms",
+      "Accessibility",
+      "Cookies",
+      "Contact"
+    ]
+  },
+  "collections": {
+    "kombra-group": {
+      "name": "Kombra Group (parent house)",
+      "audience": "Organisations, partners, adults",
+      "accent": "#C67D3A",
+      "accentText": "#8A4B17",
+      "ground": "#0B1322",
+      "groundAlt": "#142238",
+      "paper": "#FBF9F5",
+      "onGround": "#FBF9F5",
+      "muted": "rgba(251,249,245,0.68)",
+      "rule": "rgba(251,249,245,0.14)",
+      "legalTemplate": "group"
+    },
+    "purpose-built": {
+      "name": "Purpose Built collection",
+      "audience": "Adult readers, practitioners, organisations",
+      "accent": "#C9A84C",
+      "accentText": "#8A6D1F",
+      "ground": "#142036",
+      "groundAlt": "#1B2A4A",
+      "paper": "#FAF7F2",
+      "onGround": "#FAF7F2",
+      "muted": "rgba(250,247,242,0.68)",
+      "rule": "rgba(250,247,242,0.14)",
+      "legalTemplate": "purpose-built"
+    },
+    "kombracare": {
+      "name": "KombraCare collection",
+      "audience": "Parents and families; children use some products with a parent",
+      "accent": "#2D6A5E",
+      "accentText": "#2D6A5E",
+      "ground": "#FFFFFF",
+      "groundAlt": "#F4EFE6",
+      "paper": "#FFFFFF",
+      "onGround": "#22252A",
+      "muted": "#5B6168",
+      "rule": "rgba(34,37,42,0.12)",
+      "legalTemplate": "kombracare"
+    },
+    "kombra-labs": {
+      "name": "Kombra Labs collection",
+      "audience": "Early ideas and ventures in preview; partners and testers",
+      "accent": "#C67D3A",
+      "accentText": "#8A4B17",
+      "ground": "#0B1322",
+      "groundAlt": "#142238",
+      "paper": "#FBF9F5",
+      "onGround": "#FBF9F5",
+      "muted": "rgba(251,249,245,0.68)",
+      "rule": "rgba(251,249,245,0.14)",
+      "legalTemplate": "group",
+      "note": "Shares the parent's copper: Labs is the parent's studio. A venture moves to its own collection when it graduates."
+    },
+    "kekoro": {
+      "name": "Kekoro collection",
+      "audience": "Young adults and families (Black Power House, Black Summer Camp, Return and Build)",
+      "accent": null,
+      "legalTemplate": "kombracare (camps involve children)",
+      "note": "No design source and no local code on disk; Vercel project returnandbuild exists without source. Gap."
+    }
+  },
+  "brands": {
+    "kombragroup": {
+      "name": "Kombra Group",
+      "collection": "kombra-group",
+      "domain": "kombragroup.com",
+      "email": "hello@kombragroup.com",
+      "collects": [
+        "email messages you send us"
+      ],
+      "flags": {
+        "parent": true
+      }
+    },
+    "kombra-labs": {
+      "name": "Kombra Labs",
+      "collection": "kombra-labs",
+      "domain": "Kombra Labs site (pre-launch)",
+      "email": "hello@kombragroup.com",
+      "collects": [
+        "nothing is sent to us when you follow an idea: the follow form keeps your email in this browser only"
+      ],
+      "flags": {}
+    },
+    "vibebuilt": {
+      "name": "VibeBuilt",
+      "collection": "kombra-labs",
+      "domain": "VibeBuilt field app (pre-launch)",
+      "email": "hello@kombragroup.com",
+      "collects": [
+        "nothing is sent to us: photos and job progress stay in this device's browser storage until you clear them"
+      ],
+      "flags": {
+        "camera": true
+      }
+    },
+    "pbp": {
+      "name": "Purpose Built Press",
+      "collection": "purpose-built",
+      "domain": "purposebuiltpress.com",
+      "email": "hello@purposebuiltpress.com",
+      "collects": [
+        "your name and email address when you contact us, join a list or order",
+        "order details (what you bought, where to ship it)",
+        "messages you send us"
+      ],
+      "flags": {
+        "commerce": true,
+        "updates": true,
+        "analytics": "Google Analytics 4 (only after you choose Accept)"
+      }
+    },
+    "nif": {
+      "name": "Name It First",
+      "collection": "purpose-built",
+      "domain": "nameitfirst.com",
+      "email": "hello@purposebuiltpress.com",
+      "collects": [
+        "your account email and sign-in details",
+        "answers you write in workbooks, questions and the reading room",
+        "order details",
+        "messages you send us"
+      ],
+      "flags": {
+        "commerce": true,
+        "updates": true,
+        "accounts": true,
+        "reflections": true,
+        "ai": true,
+        "analytics": "Google Analytics 4 and Microsoft Clarity (only after you choose Accept); Vercel Web Analytics (cookieless page counts)"
+      }
+    },
+    "pbc": {
+      "name": "Purpose Built Compliance",
+      "collection": "purpose-built",
+      "domain": "purposebuiltcompliance.com",
+      "email": "compliance@purposebuiltcompliance.com",
+      "collects": [
+        "your name, email address, and licence or court case number when you enrol or pay",
+        "course progress and certificate records",
+        "payment details are entered on Stripe's checkout page; we receive the payment result, not your card number",
+        "messages you send us"
+      ],
+      "flags": {
+        "accounts": true,
+        "certificates": true,
+        "commerce": true
+      }
+    },
+    "heritage": {
+      "name": "Heritage Vault",
+      "collection": "purpose-built",
+      "domain": "Heritage Vault (pre-launch)",
+      "email": "hello@kombragroup.com",
+      "collects": [
+        "your account email",
+        "voice recordings, photos, stories, people and places you add to your family vault",
+        "gift purchase details"
+      ],
+      "flags": {
+        "accounts": true,
+        "commerce": true,
+        "familyContent": true
+      },
+      "imprint": "Purpose Built Heritage"
+    },
+    "bebetteratlife": {
+      "name": "Be Better at Life",
+      "collection": "purpose-built",
+      "domain": "Be Better at Life (soft launch)",
+      "email": "hello@kombragroup.com",
+      "collects": [
+        "your email address when you reserve a copy or ask a question",
+        "the questions you send",
+        "if you choose Accept for analytics: the pages you view, linked to a random visitor number in a first-party cookie (bbal_v) and a one-way hash of your IP address"
+      ],
+      "flags": {
+        "updates": true,
+        "analytics": "first-party page counts (cookie bbal_v, only after you choose Accept)"
+      }
+    },
+    "hew": {
+      "name": "KombraCare (hew.app)",
+      "collection": "kombracare",
+      "domain": "hew.app (pre-launch)",
+      "email": "hello@kombragroup.com",
+      "collects": [
+        "your parent account email",
+        "information you enter about your children: first names, birthdays, interests, learning activities",
+        "health information you choose to enter: allergies, sensory needs and therapy notes",
+        "playdate and event details you share with families you choose"
+      ],
+      "flags": {
+        "accounts": true,
+        "children": true,
+        "health": true,
+        "updates": true
+      }
+    },
+    "bethehero": {
+      "name": "Be The Hero",
+      "collection": "purpose-built",
+      "domain": "bethehero.app",
+      "email": "hello@kombragroup.com",
+      "collects": [
+        "nothing about your child is saved: the name and age typed at the start stay in the browser tab and are gone when it closes"
+      ],
+      "flags": {
+        "children": true,
+        "childNoCollection": true
+      },
+      "imprint": "Purpose Built Learning"
+    }
+  },
+  "_collectionSource": "Collections match the ventures register (/Users/mb/kombra-labs-content/src/*.py, 2026-10-30) and NIF CLAUDE.md strategic decision 5 (Purpose Built Learning imprint = kids branching-dilemma titles)."
+}

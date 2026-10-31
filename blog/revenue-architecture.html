@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Revenue Architecture: Why Hiring Won't Fix a System Problem — Kombra Group</title>
 <meta name="description" content="When enterprise pipeline is healthy but conversion is underperforming, the instinct is to hire. Often it's not the right call.">
 <meta property="og:title" content="Revenue Architecture: Why Hiring Won't Fix a System Problem">
 <meta property="og:description" content="When enterprise pipeline is healthy but conversion is underperforming, the instinct is to hire. Often it's not the right call.">
 <meta property="og:type" content="article">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--navy:#1B2A4A;--copper:#B87333;--warm-white:#F7F4EF;--charcoal:#3D3D3A;--warm-gray:#8B8880;--sand:#D4C5A9;--font-display:'DM Serif Display',Georgia,serif;--font-body:'Instrument Sans','Segoe UI',sans-serif}
+:root{--navy:#142238;--copper:#8A4B17;--warm-white:#FBF9F5;--charcoal:#22252A;--warm-gray:#5B6168;--sand:#E8DCC4;--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 body{font-family:var(--font-body);color:var(--charcoal);background:var(--warm-white);line-height:1.8;-webkit-font-smoothing:antialiased}
 .topbar{background:var(--navy);padding:.75rem 2rem;display:flex;justify-content:space-between;align-items:center}
 .topbar a{font-family:var(--font-display);color:rgba(255,255,255,.9);text-decoration:none;font-size:.95rem}
@@ -27,6 +28,17 @@ article strong{color:var(--navy)}
 .author-box a{color:var(--copper);text-decoration:none;font-weight:600}
 footer{text-align:center;padding:2rem;font-size:.75rem;color:var(--warm-gray);border-top:1px solid var(--sand);margin-top:2rem}
 footer a{color:var(--copper);text-decoration:none}
+/* Kombra Group family bar (rules from /Users/mb/kombra-family-1030) */
+.kf-bar{background:var(--kf-bg);color:var(--kf-fg);border-top:1px solid var(--kf-rule);font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px;line-height:1.5}
+.kf-inner{max-width:1180px;margin:0 auto;padding:16px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px}
+.kf-mark{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:18px;letter-spacing:.01em;color:var(--kf-fg);text-decoration:none}
+.kf-mark span{color:var(--kf-accent)}
+.kf-line{font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--kf-muted)}
+.kf-links{display:flex;flex-wrap:wrap;gap:4px 16px;margin-left:auto}
+.kf-links a{color:var(--kf-muted);text-decoration:underline;text-underline-offset:3px;padding:6px 0;min-height:24px}
+.kf-links a:hover{color:var(--kf-fg)}
+.kf-bar a:focus-visible{outline:3px solid var(--kf-accent);outline-offset:2px}
+@media (max-width:380px){.kf-inner{padding:16px}.kf-links{margin-left:0}}
 </style>
 </head>
 <body>
@@ -58,5 +70,15 @@ footer a{color:var(--copper);text-decoration:none}
 <footer>
   <a href="/">kombragroup.com</a> · <a href="https://michellebglobal.com">michellebglobal.com</a> · <a href="mailto:hello@kombragroup.com">hello@kombragroup.com</a>
 </footer>
+<!-- Kombra Group family bar (source: /Users/mb/kombra-family-1030) -->
+<div class="kf-bar" style="--kf-bg:#0B1322;--kf-fg:#FBF9F5;--kf-muted:rgba(251,249,245,0.68);--kf-accent:#C67D3A;--kf-rule:rgba(251,249,245,0.14)">
+  <div class="kf-inner">
+    <a class="kf-mark" href="/" aria-label="Kombra Group home">kombra<span>group</span></a>
+    <span class="kf-line">The Kombra Group family of companies</span>
+    <nav class="kf-links" aria-label="Legal">
+      <a href="/legal/privacy.html">Privacy</a><a href="/legal/terms.html">Terms</a><a href="/legal/accessibility.html">Accessibility</a><a href="/legal/cookies.html">Cookies</a><a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</div>
 </body>
 </html>
